@@ -1,0 +1,76 @@
+baseURL = "https://cantolyrico.com/"
+languageCode = "en-ZA"
+title = "Marcelle Volckaert"
+theme = "cantolyrico-warm"
+
+# Site metadata
+[params]
+  tagline = "Classical Soprano"
+  description = "Official website of Marcelle Volckaert, classical soprano. Performances, recordings, and booking information."
+  author = "Marcelle Volckaert"
+  location = "Marvão, Portugal"
+  email = "info@cantolyrico.com"
+
+  # Social links
+  instagram = "go_well_with_marcelle"
+
+# Menu configuration - Elegant opera singer navigation
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Schedule"
+    url = "/singing/performances/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Recordings"
+    url = "/singing/music/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Media"
+    url = "/singing/videos/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+# Build configuration
+[build]
+  writeStats = true
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  year = "years"
+  venue = "venues"
+
+# Minification
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true

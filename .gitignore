@@ -1,0 +1,54 @@
+# Nix/direnv
+.vscode-extensions
+.direnv
+result
+result-man
+
+# Editor
+*.*~
+*.swp
+.vscode
+.Rhistory
+.$*
+
+# Squarespace mirror (source for migration, not version controlled)
+cantolyrico-mirror/
+
+# Hugo
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Node
+node_modules/
+
+# MkDocs
+docs/site/
+
+# Build artifacts
+*.qcow2
+eoi.zip
+.vscodgit
+dotfiles/obs-studio/updates/whatsnew.json
+dotfiles/obs-studio/plugin_config/
+dotfiles/obs-studio/profiler_data
+dotfiles/obs-studio/logs
+history.mp4
+output.ppm
+core
+resources/kartoza-logo.txt
+build/WHITEPAPER-SLIDES.pdf
+site
+CMakeCache.txt
+CMakeFiles
+ITK
+.env
+vscode.log
+legacy
+backups
+
+# Logs
+PROMPT.log
+
+# Claude Code (per-user)
+.claude/settings.local.json

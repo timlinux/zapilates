@@ -1,0 +1,83 @@
+{{/*
+  Stripe Buy Button Shortcode - Bulma Enhanced
+  Usage: {{< stripe-buy productId="prod_xxx" price="$50" label="Book Now" >}}
+*/}}
+{{ $productId := .Get "productId" }}
+{{ $price := .Get "price" | default "" }}
+{{ $label := .Get "label" | default "Buy Now" }}
+{{ $style := .Get "style" | default "primary" }}
+{{ $size := .Get "size" | default "medium" }}
+{{ $icon := .Get "icon" | default "shopping-cart" }}
+
+<button
+  class="button is-{{ $style }} is-{{ $size }} is-rounded stripe-buy-button"
+  data-product-id="{{ $productId }}"
+  onclick="handleStripeCheckout('{{ $productId }}')"
+>
+  <span class="icon">
+    <i class="fas fa-{{ $icon }}"></i>
+  </span>
+  <span>{{ $label }}{{ with $price }} - {{ . }}{{ end }}</span>
+</button>
+
+{{/* Include Stripe checkout script once per page */}}
+{{ if not (.Page.Scratch.Get "stripeScriptIncluded") }}
+  {{ .Page.Scratch.Set "stripeScriptIncluded" true }}
+  <script>
+    async function handleStripeCheckout(productId) {
+      const button = event.target.closest('button');
+      const originalContent = button.innerHTML;
+
+      try {
+        // Show loading state
+        button.classList.add('is-loading');
+        button.disabled = true;
+
+        const response = await fetch('/.netlify/functions/create-checkout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ productId }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const { url } = await response.json();
+
+        if (url) {
+          window.location.href = url;
+        } else {
+          throw new Error('No checkout URL received');
+        }
+      } catch (error) {
+        console.error('Checkout error:', error);
+
+        // Show error notification
+        const notification = document.createElement('div');
+        notification.className = 'notification is-danger is-light';
+        notification.innerHTML = `
+          <button class="delete"></button>
+          <strong>Checkout Error</strong><br>
+          Unable to create checkout session. Please try again later.
+        `;
+        button.parentNode.insertBefore(notification, button.nextSibling);
+
+        // Add close functionality
+        notification.querySelector('.delete').addEventListener('click', () => {
+          notification.remove();
+        });
+
+        // Auto-remove after 5 seconds
+        setTimeout(() => notification.remove(), 5000);
+      } finally {
+        // Restore button state
+        button.classList.remove('is-loading');
+        button.disabled = false;
+        button.innerHTML = originalContent;
+      }
+    }
+  </script>
+{{ end }}

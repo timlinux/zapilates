@@ -1,0 +1,30 @@
+{
+  "MD003": {
+    "style": "atx"
+  },
+  "MD013": false,  # allow long lines
+  "MD029": false,  # allow different ordered list prefixes (for auto-generated TOC)
+  "MD033": false,  # allow inline HTML
+  "MD046": false,  # allow both fenced and indented code blocks (mermaid needs fenced)
+  "MD041": false,  # allow documents without top-level heading (Marp slides often start with front-matter)
+  "MD025": false,  # allow multiple top-level headings (Marp slides can have multiple)
+  "MD010": false,  # allow hard tabs (sometimes used in code blocks)
+  "MD004": false,  # allow unordered list style variations (Marp themes may use different styles)
+  "MD007": false,  # allow inconsistent indentation for list items (Marp slide formatting)
+  "MD012": false,  # allow consecutive blank lines (slide separation)
+  "MD014": false,  # allow dollar signs at line start (for math blocks)
+  "MD018": false,  # allow space after hash on atx heading (Marp front-matter)
+  "MD019": false,  # allow multiple spaces after hash on atx heading
+  "MD022": false,  # allow blank lines around headings
+  "MD023": false,  # allow headings to be followed by blank lines
+  "MD024": false,  # allow multiple headings with same content
+  "MD026": false,  # allow trailing punctuation in headings
+  "MD027": false,  # allow multiple spaces after blockquote marker
+  "MD028": false,  # allow blank lines inside blockquotes
+  "MD034": false,  # allow bare URLs (Marp links)
+  "MD035": false,  # allow horizontal rules style variations
+  "MD036": false,  # allow emphasis style variations
+  "MD038": false,  # allow spaces inside code fences
+  "MD039": false,  # allow spaces inside link text
+  "MD040": false   # allow fenced code blocks without language specifier
+}

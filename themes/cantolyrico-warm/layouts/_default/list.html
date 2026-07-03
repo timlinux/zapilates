@@ -1,0 +1,142 @@
+{{ define "main" }}
+<section class="list-page">
+  {{/* Page Header */}}
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  {{/* Main Content */}}
+  <section class="section">
+    <div class="container">
+      {{/* Section intro content if any */}}
+      {{ if .Content }}
+      <div class="content is-medium mb-6">
+        {{ .Content }}
+      </div>
+      {{ end }}
+
+      {{/* Card Grid */}}
+      {{ if .Pages }}
+      <div class="columns is-multiline">
+        {{ range .Pages }}
+        <div class="column is-4-desktop is-6-tablet">
+          <article class="card animate-on-scroll">
+            {{ with .Params.image }}
+            <div class="card-image">
+              <figure class="image is-16by9">
+                <a href="{{ $.Permalink }}">
+                  <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+                </a>
+              </figure>
+            </div>
+            {{ end }}
+            <div class="card-content">
+              {{ with .Date }}
+              <p class="is-size-7 has-text-grey mb-2">
+                <span class="icon is-small">
+                  <i class="fas fa-calendar-alt"></i>
+                </span>
+                {{ .Format "January 2, 2006" }}
+              </p>
+              {{ end }}
+              <h2 class="title is-5 mb-3">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+              </h2>
+              {{ with .Summary }}
+              <p class="is-size-6 has-text-grey mb-4">
+                {{ . | truncate 120 }}
+              </p>
+              {{ end }}
+            </div>
+            <footer class="card-footer">
+              <a href="{{ .Permalink }}" class="card-footer-item">
+                <span>Read More</span>
+                <span class="icon is-small ml-2">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
+              </a>
+            </footer>
+          </article>
+        </div>
+        {{ end }}
+      </div>
+
+      {{/* Pagination */}}
+      {{ $paginator := .Paginator }}
+      {{ if gt $paginator.TotalPages 1 }}
+      <nav class="pagination is-centered mt-6" role="navigation" aria-label="pagination">
+        {{ if $paginator.HasPrev }}
+        <a class="pagination-previous" href="{{ $paginator.Prev.URL }}">
+          <span class="icon"><i class="fas fa-chevron-left"></i></span>
+          <span>Previous</span>
+        </a>
+        {{ else }}
+        <span class="pagination-previous" disabled>
+          <span class="icon"><i class="fas fa-chevron-left"></i></span>
+          <span>Previous</span>
+        </span>
+        {{ end }}
+
+        {{ if $paginator.HasNext }}
+        <a class="pagination-next" href="{{ $paginator.Next.URL }}">
+          <span>Next</span>
+          <span class="icon"><i class="fas fa-chevron-right"></i></span>
+        </a>
+        {{ else }}
+        <span class="pagination-next" disabled>
+          <span>Next</span>
+          <span class="icon"><i class="fas fa-chevron-right"></i></span>
+        </span>
+        {{ end }}
+
+        <ul class="pagination-list">
+          {{ range $paginator.Pagers }}
+          <li>
+            <a class="pagination-link{{ if eq . $paginator }} is-current{{ end }}"
+               href="{{ .URL }}"
+               aria-label="Go to page {{ .PageNumber }}">
+              {{ .PageNumber }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+      {{ end }}
+
+      {{ else }}
+      <div class="notification is-light has-text-centered">
+        <p class="is-size-5">
+          <span class="icon"><i class="fas fa-info-circle"></i></span>
+          No items found.
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+</section>
+
+{{/* Scroll Animation Script */}}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  animatedElements.forEach(el => observer.observe(el));
+});
+</script>
+{{ end }}

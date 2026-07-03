@@ -1,0 +1,53 @@
+site_name: Canto Lyrico Documentation
+site_description: Documentation for the Canto Lyrico website
+site_author: Marcelle Volckaert
+site_url: https://timlinux.github.io/cantolyrico.com/
+
+repo_name: timlinux/cantolyrico.com
+repo_url: https://github.com/timlinux/cantolyrico.com
+
+theme:
+  name: material
+  palette:
+    primary: deep orange
+    accent: amber
+  font:
+    text: Source Sans 3
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+
+nav:
+  - Home: index.md
+  - User Guide:
+    - Getting Started: user/getting-started.md
+    - Navigation: user/navigation.md
+    - Audio Player: user/audio-player.md
+  - Administrator Guide:
+    - Deployment: admin/deployment.md
+    - Configuration: admin/configuration.md
+    - Content Management: admin/content.md
+  - Developer Guide:
+    - Setup: dev/setup.md
+    - Theme Development: dev/theme.md
+    - Shortcodes: dev/shortcodes.md
+    - Contributing: dev/contributing.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/timlinux/cantolyrico.com
+
+copyright: "&copy; Canto Lyrico. All rights reserved."

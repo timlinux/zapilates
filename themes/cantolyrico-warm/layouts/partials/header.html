@@ -1,0 +1,66 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-inner">
+      <a class="navbar-brand" href="{{ "/" | relURL }}">
+        Marcelle <span>Volckaert</span>
+      </a>
+
+      <div class="navbar-menu" id="mainNavbar">
+        {{ range .Site.Menus.main }}
+        <a class="nav-link{{ if eq $.RelPermalink .URL }} is-active{{ end }}" href="{{ .URL | relURL }}">
+          {{ .Name }}
+        </a>
+        {{ end }}
+
+        {{/* Social Links */}}
+        <div class="social-links-nav">
+          {{ with .Site.Params.instagram }}
+          <a href="https://www.instagram.com/{{ . }}/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          {{ end }}
+          {{ with .Site.Params.youtube }}
+          <a href="https://youtube.com/{{ . }}" target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Navbar burger toggle
+  const burger = document.querySelector('.navbar-burger');
+  const menu = document.querySelector('.navbar-menu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
+
+  // Navbar scroll effect
+  const navbar = document.querySelector('.navbar');
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+      navbar.classList.add('is-scrolled');
+    } else {
+      navbar.classList.remove('is-scrolled');
+    }
+
+    lastScroll = currentScroll;
+  });
+});
+</script>

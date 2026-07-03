@@ -1,0 +1,17 @@
+{{/*
+  YouTube Embed Shortcode (privacy-respecting) - Bulma Enhanced
+  Usage: {{< youtube id="VIDEO_ID" title="Video Title" >}}
+*/}}
+{{ $id := .Get "id" }}
+{{ $title := .Get "title" | default "YouTube video" }}
+
+<div class="video-embed mb-5">
+  <iframe
+    src="https://www.youtube-nocookie.com/embed/{{ $id }}"
+    title="{{ $title }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy">
+  </iframe>
+</div>

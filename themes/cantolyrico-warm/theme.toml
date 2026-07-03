@@ -1,0 +1,14 @@
+# Theme metadata
+name = "Canto Lyrico Warm"
+license = "MIT"
+licenselink = "https://github.com/timlinux/cantolyrico.com/blob/main/LICENSE"
+description = "A warm, personal theme for classical singer & pilates instructor portfolio"
+homepage = "https://cantolyrico.com"
+min_version = "0.112.0"
+
+[author]
+  name = "Kartoza"
+  homepage = "https://kartoza.com"
+
+[params]
+  description = "Warm aesthetic with terracotta, gold, and cream tones"
