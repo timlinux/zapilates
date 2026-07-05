@@ -1,27 +1,49 @@
 ---
 title: "About Marcelle"
-description: "Marcelle started performing at a young age with classical ballet, piano, violin and acting."
-image: "/images/MarcelleSeatedPhoto.png"
+description: "Movement specialist, Pilates instructor, and researcher — over 20 years teaching Pilates on three continents."
+image: "/images/FH_Canto+Lyrico-10.jpg"
 ---
 
-> "Breathtaking performance Marcelle, brought tears to my eyes"
+## Movement specialist
+
+Marcelle has been involved in body work ever since her introduction to ballet at the age of 4, studying classical ballet throughout her school years, including as a school subject. Ballet and dance would prove a lifelong activity, and it was through her ballet teacher — the highly esteemed Jennifer Paynter (RAD examiner and teacher trainer) — that she was introduced to the Pilates method as an adult.
+
+An interest in body mechanics, anatomy, and the search for *how to make the body work correctly* was sparked, starting an ongoing study of the human body and subsequent Pilates training in the Body Control Pilates method, followed by full instructor certification through Pilates Conditioning (PTAF, South Africa) and STOTT Pilates (Canada). Marcelle also holds a **Master's Degree in Music (cum laude, Stellenbosch University)** in which she researched the benefits of the Pilates method for classical singers specifically.
+
+Marcelle has taught Pilates for over **20 years, on three continents and in different languages**. She teaches Matwork, Pilates Equipment and Barre classes, as well as Remedial classes and workshops for musicians, dancers, performing artists, and other specialists. Her passion for uncovering each student's potential is what makes teaching rewarding for her, and drives her continuous search for new ways of doing and understanding.
+
+As a result, she has studied various other somatic modalities such as Yoga, Reiki, the Franklin Method, fascial integration work, Pranayama and meditation — combining everything she has learnt into her classes, thereby creating unique lessons with a different focus for each student.
+
+## Qualifications
+
+- **MMus** — University of Stellenbosch (*cum laude*). Thesis: *Breathe in for nothing: an interpretative phenomenological analysis exploring the influence of a Pilates warm-up in singers*
+- **BA.DHE** — University of Cape Town
+- **STOTT Pilates** — Matwork and full equipment (Canada)
+- **Pilates Conditioning** — PTAF (Pretoria Technikon, South Africa)
+- Ongoing study in Yoga, Reiki, Franklin Method, fascial integration, Pranayama, meditation
+
+Please feel free to [contact Marcelle](/contact/) to discuss how the Pilates method can be of value to you, and how it might assist you in your quest for a healthy and pain-free life. We only have one life, so we must live it actively and fulfil our true potential.
+
+---
+
+## What clients say
+
+> "The MRI scan showed that I had a protruding disc that had settled on the sciatic nerve, and the follow-up visit to the Consultant Orthopaedic Surgeon showed that my back had stabilised. His only explanation was that Pilates had allowed me to develop core stability and therefore allowed the back enough stability to function on its own. The operation he was going to suggest was dropped — and all he could say was to carry on with Pilates."
 >
-> — Helen, audience member, Four Horsemen, Cavali Estate, December 2015
+> — M.B., Policewoman (she successfully ran a half-marathon some years later)
 
-She has performed at many of the major venues and festivals throughout South Africa, as guest artist for the Cape Town Festival's Concert in the Park, St George's Cathedral, JHB University Sundowner Concert Series, as well various concerts in the UK, Denmark, Belgium (Opus Sobrietate) and Brazil (Pergolesi's Stabat Mater). In 2011, Marcelle and highly acclaimed pianist Sylvia Schulman and esteemed Baritone Dr. Brad Liebl started the Country Classics Concert Series, in an effort to promote an appreciation of their art and to generate greater audiences and performance opportunities in the Western Cape countryside.
+> "I fractured part of my lower spine in a horse riding accident. I booked in for 5 private sessions to see if Pilates would be able to help ease my back pain… I learned about how the body doesn't always work for its own good. My muscles were trying to do one thing that they thought was helping to protect me but it was really just causing me pain. Two years later I am now pain free although I do still sometimes get discomfort in my lower back, but I have a far greater understanding of what is causing it."
+>
+> — R.E., Career woman
 
-Being an unusually skilled performer, Marcelle has also enjoyed collaborations with different types of artists, notably, esteemed Sculptor Haidee Nel (I Long For You/ Les nuits d'ete; The Four Horsemen Exhibition, Cavalli Estate; Flowers in Art Exhibition for the Cape Town Flower Show; Swellendam Hospital Fundraiser and the Meermin Meerlig Sonvanger collaboration), as well as Belgian photographer Bert Daenen (Opus Sobrietate). It is in these types of creative collaborations that Marcelle flourishes.
+> "I have suffered all my life from a weak back which caused me pain of varying degrees. The Specialist ended up by saying 'there is nothing further I can do for you.' The fact that I have persevered with the Pilates lessons is entirely due to the skill, knowledge and encouragement of the teacher."
+>
+> — A.A., Retired Policeman
 
-Her particular skill lies in creating a powerful and emotional atmosphere for each piece of music she sings, using her delicate and emotive voice. By recontextualising beyond the constraints of classical expectations, in using the musical score as the starting point for *creativity* (a collaboration with the composer if you will) rather than the end goal of *reproduction*, she is able to explore the music and character from an intellectual, emotional, musical and in particular a physical level by drawing on the various disciplines in her background.
+> "I love these classes. They are a perfect blend of creative, technical and physical challenge to keep me completely engaged for the full hour. The workout cleverly ranges between the restorativeness of Pilates and the vigour of barre, all to some really great classical music."
+>
+> — J.V., business woman & mom (Barre online)
 
-> "Your singing touches the soul" - Marina, audience member, Swellendam, 2019.
-
-> "A breathtaking soprano" - Uitstalling Gallery, Belgium, 2022
-
-> "Tears in my eyes" - Bert Daenen, photographer, Belgium 2022
-
-Marcelle started performing at a young age with classical ballet, piano, violin and acting. Whilst studying for a Bachelor of Arts Degree in English and Drama at the University of Cape Town, she continued her dance studies with Jennifer Paynter through whom she was introduced to the **Pilates method**. Marcelle later obtained Pilates Instructor certification through STOTT Pilates (Canada) and the Pretoria Technikon (SA).
-
-Having sung throughout her childhood and university in choirs and musical productions, it was only as a young adult that Marcelle was eventually persuaded to attend singing lessons. It was during these early lessons that the quality of her voice was noticed and she was introduced to classical repertoire. This introduction proved pivotal in shifting her focus towards towards acquiring a classical singing technique. Singing teachers include the world renowned Wendy Fine, Marita Napier (SA) and Jeff Talbot (UK). Subsequently she attended Master classes with David Jones (NY), Inacio de Nonno (Brazil) and The European Chamber Opera (Summer Course, Tarazona, Spain). Marcelle obtained a Master's Degree in Music through the University of Stellenbosch (cum laude). Her thesis examined how the Pilates method can be of benefit to singers in particular and musicians in general. This has initiated an interest in further research on the use of the Pilates method's benefits for singers and musicians and her teaching work has been utilised by individuals hoping to solve their technical issues in a new way, as well as by institutions, for example, the Marvão International Academy of Music, Art and Science in Portugal.
-
-Marcelle's broad range of performing skills has led to a variety of engagements including: performing in Evita (Artscape); touring with The Theatre for Youth as well as writing and directing a play for the finals of the BP Community Festival. As a soloist for the Opera Activ company she has performed scenes from: Die Fledermaus (Adele), Le nozze di Figaro (Susanna), Don Giovanni (Zerlina) and Cavalleria Rusticana (Lola).
+> "Marcelle has an amazing ability to teach via video conference and make you feel like you are in the room with her. She notices everything and provides very specific feedback and encouragement."
+>
+> — J.S., international business woman

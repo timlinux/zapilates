@@ -1,0 +1,56 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Za<em>p</em>ilates</h3>
+        <p>{{ .Site.Params.tagline }}. {{ .Site.Params.description }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Practice</h4>
+        <ul>
+          <li><a href="{{ "/about/" | relURL }}">About Marcelle</a></li>
+          <li><a href="{{ "/about-pilates/" | relURL }}">The Method</a></li>
+          <li><a href="{{ "/classes/" | relURL }}">Classes</a></li>
+          <li><a href="{{ "/thesis/" | relURL }}">Research</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Specialisms</h4>
+        <ul>
+          <li><a href="{{ "/for-singers/" | relURL }}">For Singers</a></li>
+          <li><a href="{{ "/for-dancers/" | relURL }}">For Dancers</a></li>
+          <li><a href="{{ "/workshops/" | relURL }}">Workshops</a></li>
+          <li><a href="{{ "/blog/" | relURL }}">Journal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          {{ with .Site.Params.email }}
+          <li><a href="mailto:{{ . }}">{{ . }}</a></li>
+          {{ end }}
+          {{ with .Site.Params.location }}
+          <li>{{ . }}</li>
+          {{ end }}
+          {{ with .Site.Params.instagram }}
+          <li><a href="https://www.instagram.com/{{ . }}/" target="_blank" rel="noopener">Instagram</a></li>
+          {{ end }}
+          <li><a href="{{ "/contact/" | relURL }}">Book · Enquire</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; {{ now.Year }} {{ .Site.Params.author }} · {{ .Site.Title }}</span>
+      <span class="made-with">
+        Made with 💗 by
+        <a href="https://kartoza.com" target="_blank" rel="noopener">Kartoza</a> ·
+        <a href="https://github.com/sponsors/timlinux" target="_blank" rel="noopener">Donate!</a> ·
+        <a href="https://github.com/timlinux/zapilates" target="_blank" rel="noopener">GitHub</a>
+      </span>
+    </div>
+  </div>
+</footer>

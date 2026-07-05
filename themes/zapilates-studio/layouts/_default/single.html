@@ -1,0 +1,60 @@
+{{ define "main" }}
+<article class="single">
+  <header class="page-masthead">
+    <div class="wrap">
+      <span class="eyebrow page-eyebrow">
+        {{ with .Section }}{{ humanize . }}{{ else }}Zapilates{{ end }}
+      </span>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-description">{{ . }}</p>
+      {{ end }}
+      {{ if and .Date (not .IsHome) }}
+        {{ if in (slice "blog" "workshops") .Section }}
+          <time class="page-date" datetime="{{ .Date.Format "2006-01-02" }}">
+            {{ .Date.Format "2 January 2006" }}
+          </time>
+        {{ end }}
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="page-body">
+    <div class="wrap">
+      <div class="prose">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.tags }}
+      <div class="tag-list">
+        <span class="tag-label">Tagged</span>
+        {{ range . }}
+        <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  {{ if or .PrevInSection .NextInSection }}
+  <nav class="page-pager wrap" aria-label="Page navigation">
+    <div>
+      {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}">
+        <span class="pager-eyebrow">← Previous</span>
+        <span class="pager-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+    <div class="pager-next">
+      {{ with .NextInSection }}
+      <a href="{{ .Permalink }}">
+        <span class="pager-eyebrow">Next →</span>
+        <span class="pager-title">{{ .Title }}</span>
+      </a>
+      {{ end }}
+    </div>
+  </nav>
+  {{ end }}
+</article>
+{{ end }}

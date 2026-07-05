@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="list">
+  <header class="page-masthead">
+    <div class="wrap">
+      <span class="eyebrow page-eyebrow">Zapilates</span>
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-description">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  {{ if .Content }}
+  <div class="page-body" style="padding-bottom: 0;">
+    <div class="wrap">
+      <div class="prose">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="wrap">
+    {{ if .Pages }}
+    <div class="list-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      <a class="list-card reveal" href="{{ .Permalink }}">
+        {{ with .Params.image }}
+        <div class="list-image">
+          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+        </div>
+        {{ end }}
+
+        {{ if .Date }}
+        <span class="list-meta">
+          {{ with .Params.author }}{{ . }} · {{ end }}{{ .Date.Format "January 2006" }}
+        </span>
+        {{ end }}
+
+        <h3>{{ .Title }}</h3>
+
+        {{ with .Description }}
+        <p>{{ . }}</p>
+        {{ else }}
+        <p>{{ .Summary | truncate 160 }}</p>
+        {{ end }}
+      </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

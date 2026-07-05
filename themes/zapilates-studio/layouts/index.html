@@ -1,0 +1,322 @@
+{{ define "main" }}
+
+{{/* ================================================================
+     HERO
+     ================================================================ */}}
+<section class="hero">
+  <div class="hero-media">
+    <img src="{{ "/images/IMG_0408.jpg" | relURL }}" alt="Pilates studio">
+  </div>
+
+  <div class="wrap hero-content">
+    <span class="hero-eyebrow">MMus (cum laude) · STOTT Pilates · 20+ Years</span>
+
+    <h1 class="hero-title">Movement <em>with meaning.</em></h1>
+
+    <p class="hero-strap">
+      Pilates instruction, remedial work and research with Marcelle Volckaert —
+      a practice built on breath, alignment and body integrity. Lisbon, Marvão &amp; online.
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn btn--primary" href="{{ "/about-pilates/" | relURL }}">Explore the method</a>
+      <a class="btn btn--outline" style="color: var(--bone-light); border-color: var(--bone-light);" href="{{ "/contact/" | relURL }}">
+        Book a class
+      </a>
+    </div>
+  </div>
+
+  <span class="hero-scroll">Scroll</span>
+</section>
+
+{{/* ================================================================
+     PRINCIPLES MARQUEE
+     ================================================================ */}}
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Breathe</span>
+    <span class="marquee-item">Centre</span>
+    <span class="marquee-item">Precision</span>
+    <span class="marquee-item">Control</span>
+    <span class="marquee-item">Concentration</span>
+    <span class="marquee-item">Flow</span>
+  </div>
+</div>
+
+{{/* ================================================================
+     STATS
+     ================================================================ */}}
+<section class="band band--tight">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">{{ .Site.Params.yearsTeaching }}<em>·</em></div>
+        <div class="stat-label">Years teaching</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ .Site.Params.continents }}<em>·</em></div>
+        <div class="stat-label">Continents</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">{{ .Site.Params.languages }}<em>·</em></div>
+        <div class="stat-label">Languages</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number"><em>cum</em>&nbsp;laude</div>
+        <div class="stat-label">MMus · Stellenbosch</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     SPLIT INTRO — ABOUT MARCELLE
+     ================================================================ */}}
+<section class="band band--deep">
+  <div class="wrap">
+    <div class="split-intro">
+      <figure class="split-image reveal">
+        <img src="{{ "/images/MarcelleSeatedPhoto.png" | relURL }}"
+             alt="Marcelle Volckaert" loading="lazy">
+      </figure>
+
+      <div class="split-body reveal">
+        <span class="eyebrow">About Marcelle</span>
+        <h2>A body that <span class="serif-italic">holds together.</span></h2>
+
+        <p class="lede">
+          I have been teaching Pilates for over twenty years, on three continents and in different languages.
+        </p>
+
+        <p>
+          From my introduction to ballet at four years old, through my study of the human body under
+          Jennifer Paynter and full instructor certification with STOTT Pilates (Canada) and PTAF (South Africa),
+          my search has always been the same: <em>how to make the body work correctly</em>.
+        </p>
+
+        <p>
+          I teach Matwork, Pilates Equipment and Barre — as well as Remedial classes and workshops for
+          musicians, dancers, performing artists and other specialists.
+        </p>
+
+        <dl class="credentials">
+          <div>
+            <dt>Certification</dt>
+            <dd>STOTT Pilates<br>PTAF Conditioning</dd>
+          </div>
+          <div>
+            <dt>Research</dt>
+            <dd>MMus — Stellenbosch<br><em>cum laude</em></dd>
+          </div>
+        </dl>
+
+        <div style="margin-top: var(--sp-5);">
+          <a class="btn btn--outline" href="{{ "/about/" | relURL }}">Read Marcelle's story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     CLASSES
+     ================================================================ */}}
+<section class="band">
+  <div class="wrap">
+    <header class="section-head section-head--split reveal">
+      <div>
+        <span class="eyebrow">The Classes</span>
+        <h2 class="section-title">Choose your <span class="serif-italic">practice.</span></h2>
+      </div>
+      <a class="btn btn--ghost" href="{{ "/classes/" | relURL }}">All classes</a>
+    </header>
+
+    <div class="class-grid reveal">
+      <a class="class-card" href="{{ "/private/" | relURL }}">
+        <span class="class-index">01 / One-to-one</span>
+        <h3 class="class-title">Private<br>Sessions</h3>
+        <p class="class-copy">Programmes tailored to your body's needs. The most focused route into the method.</p>
+        <span class="class-more">Explore</span>
+      </a>
+
+      <a class="class-card" href="{{ "/group/" | relURL }}">
+        <span class="class-index">02 / Small group</span>
+        <h3 class="class-title">Group<br>Classes</h3>
+        <p class="class-copy">Matwork and equipment classes kept small so no one is missed.</p>
+        <span class="class-more">Explore</span>
+      </a>
+
+      <a class="class-card" href="{{ "/barre/" | relURL }}">
+        <span class="class-index">03 / Online</span>
+        <h3 class="class-title">Pilates<br>Barre</h3>
+        <p class="class-copy">Ballet-inspired, chair-based, online. Movement, music and joy — a full hour.</p>
+        <span class="class-more">Explore</span>
+      </a>
+
+      <a class="class-card" href="{{ "/remedial/" | relURL }}">
+        <span class="class-index">04 / Remedial</span>
+        <h3 class="class-title">Remedial<br>Pilates</h3>
+        <p class="class-copy">For diagnosed back, neck and hip issues. Small groups or private — with high success.</p>
+        <span class="class-more">Explore</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     SPECIALISMS — Singers / Dancers / Workshops
+     ================================================================ */}}
+<section class="band band--paper">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow-serif">— A movement practice for specialists</span>
+      <h2>The performer's body.</h2>
+      <p class="lede">Pilates programmes designed around the tension patterns each instrument, voice and discipline imposes.</p>
+    </header>
+
+    <div class="specialisms">
+      <a class="specialism reveal" href="{{ "/for-singers/" | relURL }}">
+        <div class="specialism-image">
+          <img src="{{ "/images/pilates-for-singers.jpg" | relURL }}" alt="Pilates for singers" loading="lazy">
+        </div>
+        <span class="eyebrow">For Singers</span>
+        <h3>Breath, resonance, presence.</h3>
+        <p>Pilates for singers, grounded in my Master's research on Pilates warm-up for classical voice.</p>
+      </a>
+
+      <a class="specialism reveal" href="{{ "/for-dancers/" | relURL }}">
+        <div class="specialism-image">
+          <img src="{{ "/images/photo_2024-10-22+13.46.38.jpg" | relURL }}" alt="Pilates for dancers" loading="lazy">
+        </div>
+        <span class="eyebrow">For Dancers</span>
+        <h3>Micro-stability, macro-line.</h3>
+        <p>Injury rehabilitation, alignment correction and confidence for dancers of every level.</p>
+      </a>
+
+      <a class="specialism reveal" href="{{ "/workshops/" | relURL }}">
+        <div class="specialism-image">
+          <img src="{{ "/images/e9c32c5e9242d8f6300dc90b44c3ede4_719x309.jpg" | relURL }}" alt="Pilates workshops" loading="lazy">
+        </div>
+        <span class="eyebrow">Workshops</span>
+        <h3>For musicians and ensembles.</h3>
+        <p>Workshops hosted for institutions including the Marvão International Academy of Music, Art and Science.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     THESIS CALLOUT
+     ================================================================ */}}
+<section class="band">
+  <div class="wrap">
+    <div class="thesis-callout reveal">
+      <span class="thesis-stamp">Research · MMus 2019</span>
+
+      <div>
+        <span class="eyebrow-serif">— Breathe in for nothing</span>
+        <h2>An interpretative phenomenological analysis exploring the influence of a Pilates warm-up in singers.</h2>
+      </div>
+
+      <div class="thesis-body">
+        <p>
+          Awarded <em>cum laude</em> by Stellenbosch University. Published in the Post-ip journal.
+          The research grounds how I teach today, and informs my ongoing work with singers and musicians.
+        </p>
+        <a class="btn btn--outline" href="{{ "/thesis/" | relURL }}">Read the research</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     TESTIMONIALS
+     ================================================================ */}}
+<section class="band band--deep">
+  <div class="wrap">
+    <header class="section-head reveal">
+      <span class="eyebrow">Voices</span>
+      <h2>What clients say.</h2>
+    </header>
+
+    <div class="testimonials">
+      <figure class="testimonial reveal">
+        <blockquote>
+          <p>
+            The MRI showed I had a protruding disc on the sciatic nerve. Two years of Pilates
+            later, the surgeon called off the operation. "Just carry on with Pilates."
+          </p>
+        </blockquote>
+        <cite>M.B. · Policewoman</cite>
+      </figure>
+
+      <figure class="testimonial reveal">
+        <blockquote>
+          <p>
+            I fractured part of my lower spine. Two years on, I am pain free and I have a far
+            greater understanding of what my body wants and how to work with it.
+          </p>
+        </blockquote>
+        <cite>R.E. · Career woman</cite>
+      </figure>
+
+      <figure class="testimonial reveal">
+        <blockquote>
+          <p>
+            A perfect blend of creative, technical and physical challenge. The workout ranges
+            between the restorativeness of Pilates and the vigour of barre — all to some really
+            great classical music.
+          </p>
+        </blockquote>
+        <cite>J.V. · Barre online</cite>
+      </figure>
+    </div>
+  </div>
+</section>
+
+{{/* ================================================================
+     JOURNAL PREVIEW
+     ================================================================ */}}
+{{ $journal := where .Site.RegularPages "Section" "blog" }}
+{{ if $journal }}
+<section class="band">
+  <div class="wrap">
+    <header class="section-head section-head--split reveal">
+      <div>
+        <span class="eyebrow">Journal</span>
+        <h2 class="section-title">Notes on the body.</h2>
+      </div>
+      <a class="btn btn--ghost" href="{{ "/blog/" | relURL }}">All entries</a>
+    </header>
+
+    <div class="journal-preview">
+      {{ range first 2 $journal }}
+        <a class="journal-card reveal" href="{{ .Permalink }}">
+          <div class="journal-image">
+            <img src="{{ .Params.image | default "/images/pilates.png" | relURL }}" alt="{{ .Title }}" loading="lazy">
+          </div>
+          <span class="journal-meta">
+            {{ with .Params.author }}{{ . }} · {{ end }}{{ .Date.Format "January 2006" }}
+          </span>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description | default (.Summary | truncate 160) }}</p>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ================================================================
+     CTA BAND
+     ================================================================ */}}
+<section class="cta-band">
+  <div class="wrap">
+    <span class="eyebrow" style="color: var(--sage-tint);">Get in touch</span>
+    <h2>A short conversation is usually enough to point you in the right direction.</h2>
+    <p>Tell me where your body is now and where you'd like it to be — I'll suggest a way in.</p>
+    <a class="btn btn--primary" href="{{ "/contact/" | relURL }}">Contact Marcelle</a>
+  </div>
+</section>
+
+{{ end }}

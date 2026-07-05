@@ -1,0 +1,13 @@
+name = "Zapilates Studio"
+license = "MIT"
+licenselink = "https://github.com/timlinux/zapilates/blob/main/LICENSE"
+description = "Editorial, movement-forward theme for a contemporary Pilates studio — inspired by STOTT / Merrithew, Balanced Body, and boutique studio brands"
+homepage = "https://zapilates.com"
+min_version = "0.112.0"
+
+[author]
+  name = "Kartoza"
+  homepage = "https://kartoza.com"
+
+[params]
+  description = "Clean editorial pilates aesthetic — bone, ink, and a single accent"

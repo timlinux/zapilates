@@ -1,71 +1,101 @@
-baseURL = "https://cantolyrico.com/"
-languageCode = "en-ZA"
-title = "Marcelle Volckaert"
-theme = "cantolyrico-warm"
+baseURL = "https://zapilates.com/"
+languageCode = "en"
+title = "Zapilates"
+theme = "zapilates-studio"
 
-# Site metadata
 [params]
-  tagline = "Classical Soprano"
-  description = "Official website of Marcelle Volckaert, classical soprano. Performances, recordings, and booking information."
+  tagline = "Pilates with Marcelle Volckaert"
+  description = "Pilates instruction, remedial work, and research with Marcelle Volckaert — over 20 years teaching Pilates on three continents. STOTT Pilates certified, MMus (cum laude) Stellenbosch University."
   author = "Marcelle Volckaert"
-  location = "Marvão, Portugal"
-  email = "info@cantolyrico.com"
+  location = "Lisbon & Marvão, Portugal"
+  email = "marcelle@zapilates.com"
 
-  # Social links
+  # Stats strip (shown on home page)
+  yearsTeaching = "20+"
+  continents = "3"
+  languages = "3"
+
+  # Social
   instagram = "go_well_with_marcelle"
 
-# Menu configuration - Elegant opera singer navigation
 [menu]
   [[menu.main]]
+    identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 1
+    weight = 10
 
   [[menu.main]]
-    name = "Schedule"
-    url = "/singing/performances/"
-    weight = 2
+    identifier = "method"
+    name = "The Method"
+    url = "/about-pilates/"
+    weight = 20
 
   [[menu.main]]
-    name = "Recordings"
-    url = "/singing/music/"
-    weight = 3
+    identifier = "classes"
+    name = "Classes"
+    url = "/classes/"
+    weight = 30
 
   [[menu.main]]
-    name = "Media"
-    url = "/singing/videos/"
-    weight = 4
+    identifier = "for-singers"
+    name = "For Singers"
+    url = "/for-singers/"
+    weight = 40
 
   [[menu.main]]
+    identifier = "for-dancers"
+    name = "For Dancers"
+    url = "/for-dancers/"
+    weight = 45
+
+  [[menu.main]]
+    identifier = "workshops"
+    name = "Workshops"
+    url = "/workshops/"
+    weight = 50
+
+  [[menu.main]]
+    identifier = "thesis"
+    name = "Research"
+    url = "/thesis/"
+    weight = 55
+
+  [[menu.main]]
+    identifier = "studio"
+    name = "Studio"
+    url = "/studio/"
+    weight = 60
+
+  [[menu.main]]
+    identifier = "journal"
+    name = "Journal"
+    url = "/blog/"
+    weight = 70
+
+  [[menu.main]]
+    identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 5
+    weight = 80
 
-# Build configuration
 [build]
   writeStats = true
 
-# Markup configuration
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "monokai"
+    style = "github"
 
-# Output formats
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
 
-# Taxonomies
 [taxonomies]
   tag = "tags"
-  category = "categories"
-  year = "years"
-  venue = "venues"
 
-# Minification
 [minify]
   disableCSS = false
   disableHTML = false

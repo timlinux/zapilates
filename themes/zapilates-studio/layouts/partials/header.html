@@ -1,0 +1,41 @@
+<header class="site-header" data-header>
+  <div class="wrap">
+    <nav class="nav" role="navigation" aria-label="Main">
+      <a class="brand" href="{{ "/" | relURL }}">
+        Za<span class="brand-mark">p</span>ilates
+        <span class="brand-sub">Marcelle Volckaert</span>
+      </a>
+
+      <ul class="nav-list" data-nav-list>
+        {{ range .Site.Menus.main }}
+          {{ if ne .Identifier "contact" }}
+            <li>
+              <a href="{{ .URL | relURL }}"
+                 class="{{ if or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}is-active{{ end }}">
+                {{ .Name }}
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+        <li>
+          <a class="nav-cta" href="{{ "/contact/" | relURL }}">Book · Enquire</a>
+        </li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="nav-mobile" data-nav-mobile>
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}"
+           class="{{ if or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}is-active{{ end }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</header>

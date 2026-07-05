@@ -1,0 +1,19 @@
+{{/*
+  Figure Shortcode — hero-image class opts in to the page-lead style.
+  Usage: {{< figure src="/images/photo.jpg" alt="…" caption="…" class="hero-image" >}}
+*/}}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "" }}
+{{ $caption := .Get "caption" }}
+{{ $class := .Get "class" | default "" }}
+{{ $width := .Get "width" }}
+
+<figure class="content-figure {{ $class }}">
+  <img src="{{ $src | relURL }}"
+       alt="{{ $alt }}"
+       loading="lazy"
+       {{ with $width }}width="{{ . }}"{{ end }}>
+  {{ with $caption }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{ end }}
+</figure>
