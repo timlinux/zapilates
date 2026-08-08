@@ -1882,21 +1882,40 @@ p {
   flex-direction: column;
   gap: var(--sp-4);
   color: var(--ink);
+  transition: transform var(--dur-2) var(--ease);
 
   .list-image {
     aspect-ratio: 4 / 3;
     overflow: hidden;
     background: var(--bone-deep);
+    border-radius: 3px;
+    position: relative;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 900ms var(--ease);
+      transition: transform 1200ms var(--ease);
+    }
+
+    // A rust hairline that sweeps in along the bottom of the image on hover.
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: var(--rust);
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+      transition: transform var(--dur-2) var(--ease);
     }
   }
 
-  &:hover .list-image img { transform: scale(1.03); }
+  &:hover { transform: translateY(-5px); }
+  &:hover .list-image img { transform: scale(1.06); }
+  &:hover .list-image::after { transform: scaleX(1); }
   &:hover h3 { color: var(--rust); }
 
   .list-meta {
@@ -2209,4 +2228,33 @@ summary:focus-visible {
    (JS also sets `inert` on the closed container). */
 @media (min-width: 960px) {
   .nav-mobile { display: none; }
+}
+
+/* -----------------------------------------------------------------------------
+ * 23. PAGE TRANSITIONS + link micro-interactions
+ * -------------------------------------------------------------------------- */
+
+/* Cross-fade between navigations. Progressive — ignored where unsupported. */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 320ms; }
+
+/* Footer links get the same underline-grow as the nav, drawn on hover/focus. */
+.footer-col a,
+.footer-contact a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size var(--dur-2) var(--ease), color var(--dur-1) var(--ease);
+
+  &:hover, &:focus-visible { background-size: 100% 1px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) { animation: none !important; }
+  .list-card { transition: none; }
+  .list-card:hover { transform: none; }
 }

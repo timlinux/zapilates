@@ -119,6 +119,16 @@
     /* ---------------------------------------------------------------------
      * Scroll reveals — per-group stagger via transition-delay
      * ------------------------------------------------------------------- */
+    // Auto-reveal interior prose blocks so long-read pages are choreographed
+    // too (shortcode blocks already carry .reveal; this covers plain markdown).
+    document
+      .querySelectorAll(
+        ".page-body .prose > p, .page-body .prose > h2, .page-body .prose > h3, " +
+        ".page-body .prose > ul, .page-body .prose > ol, .page-body .prose > blockquote, " +
+        ".page-body .prose > figure"
+      )
+      .forEach((el) => el.classList.add("reveal"));
+
     const reveals = document.querySelectorAll(".reveal");
     if (REDUCE || !("IntersectionObserver" in window)) {
       reveals.forEach((el) => el.classList.add("is-visible"));
