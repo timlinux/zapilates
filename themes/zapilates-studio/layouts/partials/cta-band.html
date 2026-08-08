@@ -1,0 +1,10 @@
+{{/* Closing call-to-action band. Every page ends on a conversion moment.
+     Optional front-matter overrides: ctaHeading, ctaText, ctaLabel, ctaHref. */}}
+<section class="cta-band">
+  <div class="wrap">
+    <span class="eyebrow" style="color: var(--sage-tint);">Get in touch</span>
+    <h2>{{ .Params.ctaHeading | default "Let's find the right way in for your body." }}</h2>
+    <p>{{ .Params.ctaText | default "Tell me where your body is now and where you'd like it to be — I'll suggest a way in." }}</p>
+    <a class="btn btn--primary cta-ember" data-magnetic href="{{ .Params.ctaHref | default "/contact/" | relURL }}">{{ .Params.ctaLabel | default "Book · Enquire" }}</a>
+  </div>
+</section>

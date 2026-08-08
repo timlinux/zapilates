@@ -9,7 +9,7 @@ weight: 10
 My understanding is that Pilates restores or creates body integrity.
 {{< /lead >}}
 
-Pilates is a mind-body exercise method with many benefits for people of all ages, occupations and fitness levels — as well as for performers, dancers, singers, musicians and other specialists. I run workshops and lessons for those specialist groups alongside my work with the general public. I also teach live online, after a short consultation to confirm the format suits you. This works for all lessons except large-equipment sessions, unless you have your own Reformer or Chair.
+Pilates is a mind-body exercise method with many benefits for people of all ages, occupations and fitness levels — as well as for performers, dancers, singers, musicians and other specialists. I run workshops and lessons for those specialist groups alongside my work with the general public. I teach live online too, after a short consultation to confirm it suits you — everything except large-equipment work, unless you have your own Reformer or Chair.
 
 I hold Pilates Instructor qualifications from **STOTT Pilates (Canada)** and **PTAF (South Africa)** for both matwork and large equipment. I obtained a Master's Degree in Music through the University of Stellenbosch (*cum laude*) in which I formally combined my two disciplines — Pilates and singing. I have been teaching Pilates for well over **20 years** and have a particular affinity for *fixing* body issues.
 

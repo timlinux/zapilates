@@ -9,7 +9,7 @@ imageFocus: "center 25%"
 Pilates programmes designed around the tension patterns each instrument, voice and discipline imposes on the body.
 {{< /lead >}}
 
-Performance and rehearsal strain take their toll. My work with performers is built to ready both body and mind for making music, dancing and performing at your best — grounded in over twenty years of teaching and my Master's research on Pilates for singers.
+The long hours of practice and the demands of the stage leave their mark on the body. My work with performers is built to ready both body and mind for making music, dancing and performing at your best — grounded in over twenty years of teaching and my Master's research on Pilates for singers.
 
 {{< checklist title="Ways to work together" >}}
 

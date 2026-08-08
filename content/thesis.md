@@ -23,3 +23,7 @@ An overview of the thesis has been published in the **Post-ip journal** — [rea
 ## How it informs my teaching
 
 The research began an ongoing interest in the benefits of the Pilates method for singers and musicians, and it shapes how I work today. You can see it in practice in my [Pilates for Singers](/for-singers/) programmes and in the [workshops](/workshops/) I run for individuals, conservatoires and music institutions.
+
+{{< cta href="/contact/?interest=Pilates%20for%20singers" label="Work with Marcelle" >}}
+Curious how this research translates into practice for your voice or your ensemble? Let's talk.
+{{< /cta >}}

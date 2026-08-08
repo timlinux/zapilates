@@ -5,11 +5,11 @@
      ================================================================ */}}
 <section class="hero">
   <div class="hero-media">
-    <img src="{{ .Site.Params.heroImage | relURL }}" alt="Pilates studio">
+    <img src="{{ .Site.Params.heroImage | relURL }}" alt="Marcelle guiding a Pilates session in the studio">
   </div>
 
   <div class="wrap hero-content">
-    <span class="hero-eyebrow">MMus (cum laude) · STOTT Pilates · 20+ Years</span>
+    <span class="hero-eyebrow">MMus (cum laude) · STOTT Pilates · 20+ years</span>
 
     <h1 class="hero-title">Movement <em>with meaning.</em></h1>
 
@@ -253,8 +253,8 @@
       <figure class="testimonial reveal">
         <blockquote>
           <p>
-            I fractured part of my lower spine. Two years on, I am pain free and I have a far
-            greater understanding of what my body wants and how to work with it.
+            Two years later I am pain free, with a far greater understanding of what causes
+            discomfort and how to work with my body rather than against it.
           </p>
         </blockquote>
         <cite>R.E. · Career woman</cite>
@@ -263,12 +263,11 @@
       <figure class="testimonial reveal">
         <blockquote>
           <p>
-            A perfect blend of creative, technical and physical challenge. The workout ranges
-            between the restorativeness of Pilates and the vigour of barre — all to some really
-            great classical music.
+            A perfect blend of creative, technical and physical challenge to keep me completely
+            engaged for the full hour — all to some really great classical music.
           </p>
         </blockquote>
-        <cite>J.V. · Barre online</cite>
+        <cite>J.V. · business woman &amp; mum</cite>
       </figure>
     </div>
   </div>
@@ -277,13 +276,6 @@
 {{/* ================================================================
      CTA BAND
      ================================================================ */}}
-<section class="cta-band">
-  <div class="wrap">
-    <span class="eyebrow" style="color: var(--sage-tint);">Get in touch</span>
-    <h2>A short conversation is usually enough to point you in the right direction.</h2>
-    <p>Tell me where your body is now and where you'd like it to be — I'll suggest a way in.</p>
-    <a class="btn btn--primary cta-ember" data-magnetic href="{{ "/contact/" | relURL }}">Contact Marcelle</a>
-  </div>
-</section>
+{{ partial "cta-band.html" . }}
 
 {{ end }}

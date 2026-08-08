@@ -42,9 +42,9 @@
       </a>
       {{ end }}
     </div>
-    {{ else }}
-    <p class="list-empty">More coming soon. In the meantime, <a href="{{ "/contact/" | relURL }}">get in touch</a> or explore the <a href="{{ "/classes/" | relURL }}">classes</a>.</p>
     {{ end }}
   </div>
 </section>
+
+{{ partial "cta-band.html" . }}
 {{ end }}
