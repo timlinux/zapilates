@@ -1209,54 +1209,6 @@ p {
 }
 
 /* -----------------------------------------------------------------------------
- * 15. JOURNAL PREVIEW
- * -------------------------------------------------------------------------- */
-
-.journal-preview {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--sp-6);
-
-  @media (max-width: 720px) { grid-template-columns: 1fr; }
-}
-
-.journal-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-4);
-
-  .journal-image {
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    background: var(--bone-deep);
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 900ms var(--ease);
-    }
-  }
-
-  &:hover .journal-image img { transform: scale(1.03); }
-
-  .journal-meta {
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.2;
-  }
-
-  p { font-size: 0.95rem; max-width: none; }
-}
-
-/* -----------------------------------------------------------------------------
  * 16. CTA BAND
  * -------------------------------------------------------------------------- */
 
@@ -2078,15 +2030,105 @@ p {
  * 20. UTILITIES / REVEAL
  * -------------------------------------------------------------------------- */
 
-.reveal {
+/* Reveals are progressive: only hidden once JS confirms it's present, so a
+   no-JS visitor sees all content. */
+.js .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 900ms var(--ease), transform 900ms var(--ease);
+  transform: translateY(28px);
+  transition: opacity 800ms var(--ease), transform 800ms var(--ease), clip-path 800ms var(--ease);
+  will-change: opacity, transform;
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Directional / clip variants */
+.js .reveal[data-reveal="left"]  { transform: translateX(-44px); }
+.js .reveal[data-reveal="right"] { transform: translateX(44px); }
+.js .reveal[data-reveal="scale"] { transform: scale(0.93); }
+.js .reveal[data-reveal="clip"]  { opacity: 1; transform: none; clip-path: inset(0 100% 0 0); }
+.js .reveal[data-reveal="clip"].is-visible { clip-path: inset(0 0 0 0); }
+
+/* -----------------------------------------------------------------------------
+ * 21. MOTION SYSTEM — progress, auto-hide header, spotlight, magnetic, hero
+ * -------------------------------------------------------------------------- */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--rust), var(--sage-tint));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.site-header {
+  transition: transform var(--dur-2) var(--ease),
+    background var(--dur-2) var(--ease),
+    box-shadow var(--dur-2) var(--ease);
+
+  &.is-hidden { transform: translateY(-100%); }
+}
+
+/* Cursor spotlight — a soft warm highlight tracking the pointer on cards */
+.specialism, .list-card { --mx: 50%; --my: 0%; }
+.specialism::before,
+.list-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(240px circle at var(--mx) var(--my),
+    rgba(177, 88, 58, 0.12), transparent 62%);
+  opacity: 0;
+  transition: opacity var(--dur-2) var(--ease);
+  pointer-events: none;
+  z-index: 0;
+}
+.specialism > *, .list-card > * { position: relative; z-index: 1; }
+@media (hover: hover) and (pointer: fine) {
+  .specialism:hover::before,
+  .list-card:hover::before { opacity: 1; }
+}
+
+/* Magnetic elements ease back into place on pointer leave */
+[data-magnetic] {
+  transition: transform var(--dur-2) var(--ease),
+    background var(--dur-1) var(--ease),
+    color var(--dur-1) var(--ease),
+    box-shadow var(--dur-1) var(--ease);
+  will-change: transform;
+}
+
+/* Home hero — choreographed staggered entrance (pure CSS, no JS needed) */
+.is-home .hero-content > * {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: heroIn 1000ms var(--ease) forwards;
+}
+.is-home .hero-content > *:nth-child(1) { animation-delay: 150ms; }
+.is-home .hero-content > *:nth-child(2) { animation-delay: 280ms; }
+.is-home .hero-content > *:nth-child(3) { animation-delay: 410ms; }
+.is-home .hero-content > *:nth-child(4) { animation-delay: 540ms; }
+@keyframes heroIn { to { opacity: 1; transform: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .js .reveal[data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .scroll-progress { display: none; }
+  .site-header.is-hidden { transform: none; }
+  .is-home .hero-content > * { opacity: 1; transform: none; animation: none; }
+  .specialism::before, .list-card::before { display: none; }
+  [data-magnetic] { transform: none !important; }
 }
 
 .text-center { text-align: center; }

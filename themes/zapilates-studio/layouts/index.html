@@ -19,8 +19,8 @@
     </p>
 
     <div class="hero-cta">
-      <a class="btn btn--primary" href="{{ "/about-pilates/" | relURL }}">Explore the method</a>
-      <a class="btn btn--outline cta-ember" style="color: var(--bone-light); border-color: var(--bone-light);" href="{{ "/contact/" | relURL }}">
+      <a class="btn btn--primary" data-magnetic href="{{ "/about-pilates/" | relURL }}">Explore the method</a>
+      <a class="btn btn--outline cta-ember" data-magnetic style="color: var(--bone-light); border-color: var(--bone-light);" href="{{ "/contact/" | relURL }}">
         Book · Enquire
       </a>
     </div>
@@ -48,20 +48,20 @@
      ================================================================ */}}
 <section class="band band--tight">
   <div class="wrap">
-    <div class="stats">
-      <div class="stat">
-        <div class="stat-number">{{ .Site.Params.yearsTeaching }}</div>
+    <div class="stats" data-reveal-group>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="{{ .Site.Params.yearsTeaching }}">{{ .Site.Params.yearsTeaching }}</div>
         <div class="stat-label">Years teaching</div>
       </div>
-      <div class="stat">
-        <div class="stat-number">{{ .Site.Params.continents }}</div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="{{ .Site.Params.continents }}">{{ .Site.Params.continents }}</div>
         <div class="stat-label">Continents</div>
       </div>
-      <div class="stat">
-        <div class="stat-number">{{ .Site.Params.languages }}</div>
+      <div class="stat reveal">
+        <div class="stat-number" data-count="{{ .Site.Params.languages }}">{{ .Site.Params.languages }}</div>
         <div class="stat-label">Languages</div>
       </div>
-      <div class="stat">
+      <div class="stat reveal">
         <div class="stat-number"><em>cum laude</em></div>
         <div class="stat-label">MMus · Stellenbosch</div>
       </div>
@@ -199,7 +199,7 @@
         </div>
         <span class="eyebrow">Workshops</span>
         <h3>For musicians and ensembles.</h3>
-        <p>Workshops hosted for institutions including the Marvão International Academy of Music, Art and Science.</p>
+        <p>Workshops for conservatoires, ensembles and music institutions — tailored to the group and the instrument.</p>
       </a>
     </div>
   </div>
@@ -282,7 +282,7 @@
     <span class="eyebrow" style="color: var(--sage-tint);">Get in touch</span>
     <h2>A short conversation is usually enough to point you in the right direction.</h2>
     <p>Tell me where your body is now and where you'd like it to be — I'll suggest a way in.</p>
-    <a class="btn btn--primary cta-ember" href="{{ "/contact/" | relURL }}">Contact Marcelle</a>
+    <a class="btn btn--primary cta-ember" data-magnetic href="{{ "/contact/" | relURL }}">Contact Marcelle</a>
   </div>
 </section>
 

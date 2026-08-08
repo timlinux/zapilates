@@ -3,9 +3,9 @@
        {{< cta href="/contact/" label="Contact Marcelle" >}}
        Not sure which class fits? A short conversation is usually enough.
        {{< /cta >}} */}}
-<div class="content-cta">
+<div class="content-cta reveal">
   {{ with .Inner }}<p>{{ . | markdownify }}</p>{{ end }}
-  <a class="btn btn--primary cta-ember" href="{{ .Get "href" | default "/contact/" | relURL }}">
+  <a class="btn btn--primary cta-ember" data-magnetic href="{{ .Get "href" | default "/contact/" | relURL }}">
     {{ .Get "label" | default "Get in touch" }}
   </a>
 </div>

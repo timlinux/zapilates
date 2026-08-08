@@ -14,7 +14,7 @@
 
   <div class="wrap">
     {{ $pages := .Pages.ByWeight }}
-    {{ if in (slice "blog" "workshops") .Section }}{{ $pages = .Pages.ByDate.Reverse }}{{ end }}
+    {{ if in (slice "workshops") .Section }}{{ $pages = .Pages.ByDate.Reverse }}{{ end }}
     {{ if $pages }}
     <div class="list-grid">
       {{ range $pages }}

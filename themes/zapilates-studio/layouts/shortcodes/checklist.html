@@ -5,7 +5,7 @@
        - First point
        - Second point
        {{< /checklist >}} */}}
-<div class="checklist">
+<div class="checklist reveal">
   {{ with .Get "title" }}<span class="checklist-title eyebrow">{{ . }}</span>{{ end }}
   {{ .Inner | markdownify }}
 </div>

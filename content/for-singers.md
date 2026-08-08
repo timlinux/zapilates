@@ -8,7 +8,7 @@ image: "/images/pilates-for-singers.jpg"
 Specially designed Pilates programmes that prepare both body and mind for making music and performance.
 {{< /lead >}}
 
-My work with singers grows out of my Master's research, *Breathe in for nothing* — an exploration of how a Pilates-based warm-up influences singers. It has been used both by individuals solving technical issues in a new way and by institutions such as the Marvão International Academy of Music, Art and Science.
+My work with singers grows out of my Master's research, *Breathe in for nothing* — an exploration of how a Pilates-based warm-up influences singers. It has been used both by individuals solving technical issues in a new way and by music institutions and conservatoires.
 
 Programmes take the musician — and the impact of the instrument or voice on the body — into account. Performance and rehearsal strain take their toll, so lessons are designed to ready both body and mind to make music at your best.
 

@@ -1,11 +1,11 @@
 ---
 title: "Workshops"
-description: "Pilates workshops for musicians, singers, dancers and specialists — hosted internationally and at Marvão."
+description: "Pilates workshops for musicians, singers, dancers and other performing specialists — available on request."
 image: "/images/IMG_1075.jpg"
 weight: 20
 ---
 
-Workshops for **musicians, singers, dancers** and other performing specialists — designed around the specific tension patterns each instrument and discipline imposes on the body. Workshops have been hosted for institutions including the **Marvão International Academy of Music, Art and Science** in Portugal.
+Workshops for **musicians, singers, dancers** and other performing specialists — designed around the specific tension patterns each instrument and discipline imposes on the body. Workshops have been hosted for conservatoires and music institutions.
 
 Programmes are tailored to the group and the instrument. Performance and rehearsal strain take their toll — so the lessons prepare both the body and the mind for making music and performing.
 

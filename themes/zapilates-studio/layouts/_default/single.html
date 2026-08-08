@@ -21,7 +21,7 @@
 
   {{/* Sibling pager only where sequential browsing makes sense (real sections
        with peers); suppressed on standalone root pages where order is arbitrary. */}}
-  {{ if and (in (slice "classes" "blog" "workshops") .Section) (or .PrevInSection .NextInSection) }}
+  {{ if and (in (slice "classes" "workshops") .Section) (or .PrevInSection .NextInSection) }}
   <nav class="page-pager wrap" aria-label="Page navigation">
     <div>
       {{ with .PrevInSection }}

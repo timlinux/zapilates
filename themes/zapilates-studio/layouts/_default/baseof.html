@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  {{/* Flag JS early so scroll-reveals only hide when JS can reveal them */}}
+  <script>document.documentElement.classList.add('js')</script>
 
   <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.tagline }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 
@@ -44,6 +46,7 @@
   {{ block "head" . }}{{ end }}
 </head>
 <body class="{{ if .IsHome }}is-home{{ end }} {{ with .Section }}section-{{ . }}{{ end }}">
+  <div class="scroll-progress" data-scroll-progress aria-hidden="true"></div>
   <a href="#main-content" class="skip-link">Skip to content</a>
 
   {{ partial "header.html" . }}

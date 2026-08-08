@@ -3,11 +3,11 @@
      `heroImage`. A breadcrumb trail replaces the old generic eyebrow, giving
      each page a specific, wayfinding kicker. `imageFocus` front-matter sets the
      object-position so portraits never crop badly. Shared by single + list. */}}
-{{ $showDate := and (eq .Kind "page") (in (slice "blog" "workshops") .Section) .Date }}
+{{ $showDate := and (eq .Kind "page") (in (slice "workshops") .Section) .Date }}
 {{ $image := or .Params.image .Site.Params.heroImage }}
 {{ $focus := .Params.imageFocus | default "center 30%" }}
 {{ $secTitle := "" }}
-{{ with .Section }}{{ $secTitle = humanize . }}{{ if eq . "blog" }}{{ $secTitle = "Journal" }}{{ end }}{{ end }}
+{{ with .Section }}{{ $secTitle = humanize . }}{{ end }}
 <header class="page-hero">
   <div class="page-hero-media">
     <img src="{{ $image | relURL }}" alt="{{ .Title }}" style="object-position: {{ $focus }};">
