@@ -308,7 +308,7 @@ p {
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--dur-2) var(--ease);
+  /* transition consolidated into §21 .site-header (auto-hide) */
 }
 
 .site-header.is-scrolled { border-bottom-color: var(--mist); }
@@ -494,8 +494,9 @@ p {
   gap: 5px;
   justify-content: center;
   align-items: center;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
+  margin-right: -0.5em; // 44px comfortable target without shifting the layout
 
   @media (min-width: 960px) { display: none; }
 
@@ -1758,10 +1759,12 @@ p {
     transition: border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);
 
     &:focus {
-      outline: none;
       border-color: var(--rust);
       box-shadow: 0 0 0 3px rgba(177, 88, 58, 0.15);
     }
+    // Drop the native outline only for pointer focus; keyboard focus keeps the
+    // branded outline on top of the box-shadow.
+    &:focus:not(:focus-visible) { outline: none; }
   }
 
   // Custom caret so the select matches the tailored inputs.
@@ -1792,40 +1795,6 @@ p {
     margin: 0;
     font-size: 0.85rem;
     color: var(--ink-muted);
-  }
-}
-
-.tag-list {
-  max-width: var(--w-narrow);
-  margin: var(--sp-8) auto 0;
-  padding-top: var(--sp-5);
-  border-top: 1px solid var(--mist);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-2);
-  align-items: center;
-
-  .tag-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    margin-right: var(--sp-3);
-  }
-
-  .tag {
-    display: inline-block;
-    padding: 0.35em 0.9em;
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    color: var(--ink-soft);
-    background: var(--bone-deep);
-    border-radius: 999px;
-
-    &:hover {
-      background: var(--ink);
-      color: var(--bone-light);
-    }
   }
 }
 
@@ -2094,7 +2063,8 @@ p {
 .site-header {
   transition: transform var(--dur-2) var(--ease),
     background var(--dur-2) var(--ease),
-    box-shadow var(--dur-2) var(--ease);
+    box-shadow var(--dur-2) var(--ease),
+    border-color var(--dur-2) var(--ease);
 
   &.is-hidden { transform: translateY(-100%); }
 }
@@ -2126,8 +2096,8 @@ p {
     background var(--dur-1) var(--ease),
     color var(--dur-1) var(--ease),
     box-shadow var(--dur-1) var(--ease);
-  will-change: transform;
 }
+[data-magnetic]:hover { will-change: transform; }
 
 /* Home hero — choreographed staggered entrance (pure CSS, no JS needed) */
 .is-home .hero-content > * {
@@ -2228,6 +2198,21 @@ summary:focus-visible {
    (JS also sets `inert` on the closed container). */
 @media (min-width: 960px) {
   .nav-mobile { display: none; }
+}
+
+/* No-JS fallback: the peel menu can't be toggled without JS, so on small
+   screens show it expanded and hide the (non-functional) toggle. */
+html:not(.js) .nav-toggle { display: none; }
+@media (max-width: 959.98px) {
+  html:not(.js) .nav-mobile {
+    max-height: none;
+    overflow: visible;
+    padding: var(--sp-5) 0 var(--sp-6);
+    border-top-color: var(--mist);
+
+    > a,
+    > .nav-mobile-group { transform: none; opacity: 1; }
+  }
 }
 
 /* -----------------------------------------------------------------------------

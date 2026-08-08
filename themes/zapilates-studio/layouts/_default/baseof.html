@@ -4,8 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  {{/* Flag JS early so scroll-reveals only hide when JS can reveal them */}}
-  <script>document.documentElement.classList.add('js')</script>
+
+  {{/* Content-Security-Policy (browser-enforced fallback; a header-capable host
+       should also serve the stronger set in static/_headers). Skipped under
+       `hugo server` so its live-reload script isn't blocked. The site loads no
+       third-party assets; the single inline script below is allow-listed by hash. */}}
+  {{ if not hugo.IsServer }}
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  {{ end }}
+
+  {{/* Flag JS early so scroll-reveals only hide when JS can reveal them.
+       Double quotes so the bytes are identical minified or not (CSP hash). */}}
+  <script>document.documentElement.classList.add("js")</script>
 
   <title>{{ if .IsHome }}{{ .Site.Title }} — {{ .Site.Params.tagline }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
 

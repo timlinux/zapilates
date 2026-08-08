@@ -70,16 +70,32 @@
       const setOpen = (open) => {
         mobile.classList.toggle("is-open", open);
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
-        if (open) mobile.removeAttribute("inert");
-        else mobile.setAttribute("inert", "");
+        if (open) {
+          mobile.removeAttribute("inert");
+          const first = mobile.querySelector("a");
+          if (first) first.focus(); // move focus into the menu
+        } else {
+          mobile.setAttribute("inert", "");
+        }
       };
       setOpen(false);
       toggle.addEventListener("click", () => setOpen(!mobile.classList.contains("is-open")));
       mobile.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && mobile.classList.contains("is-open")) {
+        if (!mobile.classList.contains("is-open")) return;
+        if (e.key === "Escape") {
           setOpen(false);
           toggle.focus();
+          return;
+        }
+        // Trap Tab within the open menu so focus can't slip behind the overlay.
+        if (e.key === "Tab") {
+          const items = Array.from(mobile.querySelectorAll("a"));
+          if (!items.length) return;
+          const first = items[0];
+          const last = items[items.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
         }
       });
     }
@@ -156,7 +172,16 @@
         },
         { rootMargin: "0px 0px -80px 0px", threshold: 0.08 }
       );
-      reveals.forEach((el) => io.observe(el));
+      reveals.forEach((el) => {
+        // Anything already in the first viewport reveals immediately (no delay),
+        // so a cross-document View Transition never cross-fades it from hidden.
+        if (el.getBoundingClientRect().top < window.innerHeight * 0.9) {
+          el.style.transitionDelay = "0ms";
+          el.classList.add("is-visible");
+        } else {
+          io.observe(el);
+        }
+      });
     }
 
     /* ---------------------------------------------------------------------
@@ -223,9 +248,9 @@
           },
           { passive: true }
         );
-        btn.addEventListener("pointerleave", () => {
-          btn.style.transform = "";
-        });
+        const reset = () => { btn.style.transform = ""; };
+        btn.addEventListener("pointerleave", reset);
+        btn.addEventListener("blur", reset); // clear stale pull on keyboard/scroll away
       });
     }
 
@@ -294,7 +319,8 @@
      * ------------------------------------------------------------------- */
     document.querySelectorAll('a[href^="#"]').forEach((a) => {
       const href = a.getAttribute("href");
-      if (!href || href === "#" || href === "#!") return;
+      // Only handle safe, simple same-document fragments.
+      if (!href || !/^#[\w-]+$/.test(href)) return;
       a.addEventListener("click", (e) => {
         const target = document.querySelector(href);
         if (!target) return;

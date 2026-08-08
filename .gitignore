@@ -52,3 +52,10 @@ PROMPT.log
 
 # Claude Code (per-user)
 .claude/settings.local.json
+
+# Hugo build artifacts
+hugo_stats.json
+
+# Local scratch (Claude Code helper output)
+claude.out
+claude.sh

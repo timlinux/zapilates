@@ -7,15 +7,6 @@
       <div class="prose">
         {{ .Content }}
       </div>
-
-      {{ with .Params.tags }}
-      <div class="tag-list">
-        <span class="tag-label">Tagged</span>
-        {{ range . }}
-        <a class="tag" href="{{ "/tags/" | relURL }}{{ . | urlize }}/">{{ . }}</a>
-        {{ end }}
-      </div>
-      {{ end }}
     </div>
   </div>
 

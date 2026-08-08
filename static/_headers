@@ -1,0 +1,17 @@
+# Security response headers for header-capable static hosts
+# (Netlify, Cloudflare Pages, Bunny, or any nginx/Caddy fronting the build).
+#
+# NOTE: bare GitHub Pages does NOT serve custom headers — deploy behind one of
+# the above (or a proxy) for these to take effect. The site already loads zero
+# third-party assets, so the CSP below is deliberately strict.
+#
+# The one inline script is the pre-paint `documentElement.classList.add("js")`
+# in baseof.html; it is allowed by the sha256 hash below. If that snippet ever
+# changes, regenerate the hash.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U='; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), browsing-topics=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin

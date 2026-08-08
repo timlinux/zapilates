@@ -24,6 +24,7 @@ Lessons in **English**, with support in **Portuguese** and **Afrikaans** where r
   <div class="field reveal">
     <label for="ef-interest">I'm interested in</label>
     <select id="ef-interest" name="interest">
+      <option value="General enquiry" selected>Please choose…</option>
       <option>Private Pilates</option>
       <option>Group Pilates</option>
       <option>Pilates Barre</option>
@@ -40,7 +41,7 @@ Lessons in **English**, with support in **Portuguese** and **Afrikaans** where r
   </div>
   <button type="submit" class="btn btn--primary cta-ember reveal" data-magnetic>Send enquiry</button>
   <p class="enquiry-status" data-enquiry-status role="status" aria-live="polite"></p>
-  <p class="enquiry-fallback">This opens your email app, ready to send. Prefer to write directly? <a href="mailto:marcelle@zapilates.com">marcelle@zapilates.com</a></p>
+  <p class="enquiry-fallback">This opens your own email app with the details filled in — nothing is sent or stored until you press send. Prefer to write directly? <a href="mailto:marcelle@zapilates.com">marcelle@zapilates.com</a></p>
 </form>
 
 ## Other ways to reach me

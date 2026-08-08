@@ -38,7 +38,7 @@ Online, instructor-led classes that combine beautiful music, ballet and Pilates 
 - **Where:** Your kitchen, living room, bedroom — any room at all
 {{< /factsheet >}}
 
-{{< quote cite="J.V. · business woman & mum" >}}
+{{< quote cite="J.V. · businesswoman & mum" >}}
 A perfect blend of creative, technical and physical challenge to keep me completely engaged for the full hour — all to some really great classical music.
 {{< /quote >}}
 

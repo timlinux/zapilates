@@ -1,5 +1,7 @@
 {{/* Performer specialism cards — the same rich image cards used on the home
-     page, for the For Performers hub. */}}
+     page, for the For Performers hub. Optional `title` sets the section head
+     (kept as an h2 so the page outline never skips from h1 to h3). */}}
+<h2 class="specialisms-head">{{ .Get "title" | default "Ways to work together" }}</h2>
 <div class="specialisms">
   <a class="specialism reveal" href="{{ "/for-singers/" | relURL }}">
     <div class="specialism-image">

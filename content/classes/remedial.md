@@ -39,11 +39,11 @@ Remedial lessons focus intensively on individual corrections, in small groups of
 
 This course is also available as private tuition (different rates apply). Please discuss your suitability and goals first.
 
-{{< quote cite="R.E. · Career woman" >}}
+{{< quote cite="R.E. · career woman" >}}
 I booked five private sessions to see if Pilates could ease my back pain. I learned how the body doesn't always work for its own good. Two years later I am pain free, with a far greater understanding of what causes discomfort and how to work with my body rather than against it.
 {{< /quote >}}
 
-{{< quote cite="A.A. · Retired Policeman" >}}
+{{< quote cite="A.A. · retired policeman" >}}
 I have suffered all my life from a weak back. That I have persevered is entirely due to the skill, knowledge and encouragement of the teacher.
 {{< /quote >}}
 
