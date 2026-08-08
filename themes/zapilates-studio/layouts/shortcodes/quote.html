@@ -1,5 +1,5 @@
 {{/* Pull-quote — a single testimonial styled as an editorial quote.
-     Usage: {{< quote cite="M.B. · Policewoman" >}}The quote text.{{< /quote >}} */}}
+     Usage: {{< quote cite="R.E. · career woman" >}}The quote text.{{< /quote >}} */}}
 <figure class="content-quote reveal">
   <blockquote>{{ .Inner | markdownify }}</blockquote>
   {{ with .Get "cite" }}<figcaption>{{ . }}</figcaption>{{ end }}

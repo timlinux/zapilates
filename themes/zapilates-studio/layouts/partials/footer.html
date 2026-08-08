@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <h3>Za<em>p</em>ilates</h3>
+        <div class="footer-brandmark">Za<em>p</em>ilates</div>
         <p>{{ .Site.Params.tagline }}. {{ .Site.Params.description }}</p>
         <ul class="footer-contact">
           {{ with .Site.Params.email }}<li><a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
@@ -12,7 +12,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Explore</h4>
+        <h2>Explore</h2>
         <ul>
           <li><a href="{{ "/about/" | relURL }}">About Marcelle</a></li>
           <li><a href="{{ "/about-pilates/" | relURL }}">The Method</a></li>
@@ -21,7 +21,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Classes</h4>
+        <h2>Classes</h2>
         <ul>
           <li><a href="{{ "/classes/private/" | relURL }}">Private</a></li>
           <li><a href="{{ "/classes/group/" | relURL }}">Group</a></li>
@@ -31,7 +31,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>For Performers</h4>
+        <h2>For Performers</h2>
         <ul>
           <li><a href="{{ "/for-singers/" | relURL }}">For Singers</a></li>
           <li><a href="{{ "/for-dancers/" | relURL }}">For Dancers</a></li>
