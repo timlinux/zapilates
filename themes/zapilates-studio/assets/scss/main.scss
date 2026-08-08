@@ -126,6 +126,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+
+  /* Fraunces is a variable font: never let the browser auto-drop small display
+     text onto its book (Times-ish) master. Pin an intentional display baseline
+     that inherits everywhere; larger roles raise `opsz` explicitly. Inter and
+     IBM Plex Mono lack these axes, so the setting is ignored for body text. */
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 40, "SOFT" 20;
 }
 
 img, picture, video {
@@ -205,17 +212,19 @@ h1, .h1 {
   font-size: clamp(2.75rem, 8vw, 6.25rem);
   font-weight: 300;
   letter-spacing: -0.025em;
+  font-variation-settings: "opsz" 96, "SOFT" 20;
 }
 
 h2, .h2 {
   font-size: clamp(2.1rem, 5vw, 3.75rem);
   font-weight: 400;
+  font-variation-settings: "opsz" 60, "SOFT" 20;
 }
 
 h3, .h3 {
   font-size: clamp(1.6rem, 3vw, 2.15rem);
   font-weight: 500;
-  font-variation-settings: "opsz" 20;
+  font-variation-settings: "opsz" 40, "SOFT" 20;
   line-height: 1.15;
 }
 
@@ -247,6 +256,7 @@ p {
   line-height: 1.35;
   color: var(--ink);
   max-width: 32ch;
+  font-variation-settings: "opsz" 56, "SOFT" 20;
 }
 
 .serif-italic {
@@ -750,13 +760,13 @@ p {
   line-height: 0.95;
   letter-spacing: -0.03em;
   color: var(--bone-light);
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 144, "SOFT" 40;
 
   em {
     font-style: italic;
     font-weight: 300;
     color: var(--rust);
-    font-variation-settings: "opsz" 144, "SOFT" 100;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
   }
 }
 
@@ -826,6 +836,7 @@ p {
 }
 
 .marquee-item {
+  font-variation-settings: "opsz" 72, "SOFT" 20;
   display: inline-flex;
   align-items: center;
   gap: var(--sp-7);
@@ -876,6 +887,7 @@ p {
 }
 
 .stat-number {
+  font-variation-settings: "opsz" 72, "SOFT" 20;
   font-family: var(--font-display);
   font-weight: 300;
   font-size: clamp(2.75rem, 5vw, 4.25rem);
@@ -1187,6 +1199,7 @@ p {
   &:nth-child(3n+2) { border-top-color: var(--sage); }
 
   blockquote {
+    font-variation-settings: "opsz" 56, "SOFT" 25;
     font-family: var(--font-display);
     font-weight: 300;
     font-style: italic;
@@ -1333,7 +1346,7 @@ p {
     max-width: 18ch;
     line-height: 0.98;
     color: var(--bone-light);
-    font-variation-settings: "opsz" 144;
+    font-variation-settings: "opsz" 144, "SOFT" 40;
   }
 }
 
@@ -1367,6 +1380,7 @@ p {
 }
 
 .page-hero-description {
+  font-variation-settings: "opsz" 56, "SOFT" 20;
   margin-top: var(--sp-2);
   font-family: var(--font-display);
   font-weight: 300;
@@ -1455,6 +1469,7 @@ p {
   }
 
   blockquote {
+    font-variation-settings: "opsz" 56, "SOFT" 25;
     border-left: 2px solid var(--rust);
     padding: var(--sp-3) 0 var(--sp-3) var(--sp-5);
     margin: var(--sp-6) 0;
@@ -1528,6 +1543,7 @@ p {
   line-height: 1.35;
   letter-spacing: -0.01em;
   color: var(--ink);
+  font-variation-settings: "opsz" 60, "SOFT" 20;
 
   em, strong { color: var(--ink); }
 }
@@ -1625,6 +1641,7 @@ p {
   background: var(--bone-light);
 
   blockquote {
+    font-variation-settings: "opsz" 56, "SOFT" 25;
     margin: 0;
     padding: 0;
     border: 0;
@@ -1937,6 +1954,7 @@ p {
 
 .footer-brand {
   .footer-brandmark {
+    font-variation-settings: "opsz" 48, "SOFT" 20;
     font-family: var(--font-display);
     font-weight: 300;
     font-size: 2.5rem;
