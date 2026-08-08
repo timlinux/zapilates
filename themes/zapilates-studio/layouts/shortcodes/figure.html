@@ -1,6 +1,10 @@
 {{/*
   Figure Shortcode — hero-image class opts in to the page-lead style.
   Usage: {{< figure src="/images/photo.jpg" alt="…" caption="…" class="hero-image" >}}
+
+  Skips rendering entirely when `src` matches the page's hero image (its
+  front-matter `image`, or the site-wide `heroImage` fallback): that photo is
+  already shown in the page masthead, so we never repeat it in the body.
 */}}
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "" }}
@@ -8,6 +12,8 @@
 {{ $class := .Get "class" | default "" }}
 {{ $width := .Get "width" }}
 
+{{ $hero := or .Page.Params.image .Site.Params.heroImage }}
+{{ if ne $src $hero }}
 <figure class="content-figure {{ $class }}">
   <img src="{{ $src | relURL }}"
        alt="{{ $alt }}"
@@ -17,3 +23,4 @@
   <figcaption>{{ . | markdownify }}</figcaption>
   {{ end }}
 </figure>
+{{ end }}

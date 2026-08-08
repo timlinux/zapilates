@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- The `figure` shortcode no longer renders an image that matches the page's
+  hero (front-matter `image` or the `heroImage` fallback) — that photo already
+  leads the page in the masthead, so it is never repeated in the body.
+
 ### Added
 
 - **Per-page hero images** — every content page now leads with a full-bleed
