@@ -65,6 +65,41 @@
 }
 
 /* -----------------------------------------------------------------------------
+ * 1b. EMBER CTA — "flame-wrap"-inspired glow for calls to action.
+ *     A CSS-only ember: a warm box-shadow that breathes on hover, plus a
+ *     single shine sweep. No canvas, no JS, works everywhere; suppressed under
+ *     prefers-reduced-motion (see §20).
+ * -------------------------------------------------------------------------- */
+
+@keyframes emberBreath {
+  0%, 100% { box-shadow: 0 8px 22px -12px rgba(177, 88, 58, 0.55), 0 0 0 0 rgba(177, 88, 58, 0); }
+  50%      { box-shadow: 0 10px 30px -10px rgba(177, 88, 58, 0.85), 0 0 22px -2px rgba(177, 88, 58, 0.45); }
+}
+
+@mixin ember-cta {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 22px -12px rgba(177, 88, 58, 0.55);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 0%, rgba(255, 245, 235, 0.35) 50%, transparent 100%);
+    transform: translateX(-130%);
+    transition: transform var(--dur-3) var(--ease);
+    pointer-events: none;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 30px -10px rgba(177, 88, 58, 0.85);
+    animation: emberBreath 2.6s var(--ease) infinite;
+
+    &::after { transform: translateX(130%); }
+  }
+}
+
+/* -----------------------------------------------------------------------------
  * 2. RESET / BASE
  * -------------------------------------------------------------------------- */
 
@@ -353,6 +388,7 @@ p {
 }
 
 .nav-cta {
+  @include ember-cta;
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
@@ -397,13 +433,28 @@ p {
   }
 }
 
+// Mobile menu — "peel"-inspired reveal. Each link folds down in 3D from the
+// top edge like a page peeling open, cascading one after another. Pure CSS
+// 3D transforms driven by the `.is-open` class the JS already toggles; the
+// max-height animation keeps layout collapsed when closed. Flattened under
+// prefers-reduced-motion (see §20).
 .nav-mobile {
-  display: none;
+  display: flex;
   flex-direction: column;
-  padding: var(--sp-5) 0 var(--sp-6);
-  border-top: 1px solid var(--mist);
+  overflow: hidden;
+  max-height: 0;
+  padding: 0;
+  border-top: 1px solid transparent;
+  perspective: 1400px;
+  perspective-origin: top center;
+  transition: max-height var(--dur-3) var(--ease), padding var(--dur-2) var(--ease), border-color var(--dur-1) var(--ease);
 
-  &.is-open { display: flex; }
+  &.is-open {
+    max-height: min(90vh, 40rem);
+    overflow-y: auto;
+    padding: var(--sp-5) 0 var(--sp-6);
+    border-top-color: var(--mist);
+  }
 
   a {
     padding: var(--sp-3) 0;
@@ -413,10 +464,29 @@ p {
     color: var(--ink);
     letter-spacing: -0.01em;
     border-bottom: 1px solid var(--mist);
+    transform-origin: top center;
+    transform: rotateX(-88deg) translateY(-6px);
+    opacity: 0;
+    transition: transform var(--dur-2) var(--ease), opacity var(--dur-2) var(--ease);
+  }
+
+  &.is-open a {
+    transform: rotateX(0) translateY(0);
+    opacity: 1;
+  }
+
+  // Stagger each link so the fold cascades top-to-bottom.
+  @for $i from 1 through 12 {
+    &.is-open a:nth-child(#{$i}) {
+      transition-delay: #{40 + ($i - 1) * 45}ms;
+    }
   }
 
   a.is-active { color: var(--rust); }
 }
+
+// Utility: apply the ember glow to any CTA (buttons on home, etc.).
+.cta-ember { @include ember-cta; }
 
 /* -----------------------------------------------------------------------------
  * 6. BUTTONS
@@ -1546,4 +1616,17 @@ p {
   }
   .hero-media img { animation: none; }
   .marquee-track  { animation: none; }
+
+  // Peel menu: fold flat and show links immediately, no 3D or cascade.
+  .nav-mobile a {
+    transform: none;
+    opacity: 1;
+    transition-delay: 0ms !important;
+  }
+
+  // Ember CTAs: no breathing, no shine sweep.
+  .nav-cta, .cta-ember {
+    animation: none !important;
+    &::after { display: none; }
+  }
 }

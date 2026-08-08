@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Peel mobile-menu reveal** — menu links fold down in 3D from the top edge in
+  a staggered cascade (pure CSS, driven by the existing `.is-open` toggle).
+- **Ember-glow CTAs** — a "flame-wrap"-inspired warm glow that breathes on hover
+  with a single shine sweep, applied to the nav "Book · Enquire" button and the
+  home hero / CTA-band buttons via a reusable `.cta-ember` class and `ember-cta`
+  SCSS mixin. Both effects are pure CSS/vanilla-JS (no canvas, no npm) and are
+  flattened under `prefers-reduced-motion`.
+
 ### Removed
 
 - Duplicate "Pilates Bio" page (`content/bio.md`); biography consolidated into
