@@ -12,6 +12,7 @@ Pilates programmes designed around the tension patterns each instrument, voice a
 Performance and rehearsal strain take their toll. My work with performers is built to ready both body and mind for making music, dancing and performing at your best — grounded in over twenty years of teaching and my Master's research on Pilates for singers.
 
 {{< checklist title="Ways to work together" >}}
+
 - **[For Singers](/for-singers/)** — technique, breath and relaxation for the voice
 - **[For Dancers](/for-dancers/)** — injury rehabilitation, alignment and control
 - **[Workshops](/workshops/)** — group and institutional sessions
