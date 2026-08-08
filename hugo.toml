@@ -10,6 +10,10 @@ theme = "zapilates-studio"
   location = "Lisbon & Marvão, Portugal"
   email = "marcelle@zapilates.com"
 
+  # Default hero image — used on the home page and as the fallback hero for any
+  # page that does not set its own `image` in front matter.
+  heroImage = "/images/IMG_0408.jpg"
+
   # Stats strip (shown on home page)
   yearsTeaching = "20+"
   continents = "3"

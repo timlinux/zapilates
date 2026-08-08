@@ -12,7 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Per-page hero images** — every content page now leads with a full-bleed
   image masthead (gradient scrim + light title), rendered by a shared
   `page-hero` partial from each page's front-matter `image`. Pages without an
-  image (e.g. tag pages) fall back to the plain text masthead.
+  image (e.g. tag pages) fall back to the site-wide `heroImage` — the same
+  photo used on the home page, defined once in `hugo.toml`.
 - **Peel mobile-menu reveal** — menu links fold down in 3D from the top edge in
   a staggered cascade (pure CSS, driven by the existing `.is-open` toggle).
 - **Ember-glow CTAs** — a "flame-wrap"-inspired warm glow that breathes on hover
