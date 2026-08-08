@@ -458,7 +458,9 @@ p {
   &.is-open .caret { transform: rotate(180deg); }
 }
 
-.nav-cta {
+// Scoped to .nav-list a so it out-specifies the generic nav-link rules that
+// would otherwise steal the CTA's text colour, horizontal padding and ::after.
+.nav-list a.nav-cta {
   @include ember-cta;
   display: inline-flex;
   align-items: center;
@@ -470,6 +472,7 @@ p {
   font-size: 0.85rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  white-space: nowrap;
   transition: background var(--dur-1) var(--ease), color var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);
 
   &:hover {
