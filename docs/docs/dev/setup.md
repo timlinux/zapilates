@@ -41,7 +41,6 @@ Open http://localhost:1313 in your browser.
 | `hugo server -D` | Start dev server with drafts |
 | `hugo --minify` | Build for production |
 | `pre-commit run --all-files` | Run all linters |
-| `python scripts/migrate.py` | Run content migration |
 | `mkdocs serve` | Start docs server |
 
 ## VS Code

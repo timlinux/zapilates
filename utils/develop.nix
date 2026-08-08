@@ -38,14 +38,11 @@ pkgs.mkShell {
     pkgs.marp-cli
     pkgs.httplz
 
-    # Python for migration scripts
-    pkgs.python312
-    pkgs.python312Packages.beautifulsoup4
-    pkgs.python312Packages.html2text
-    pkgs.python312Packages.pyyaml
   ];
 
   shellHook = ''
+    # Make the repo's helper scripts (e.g. `preview`) available on PATH.
+    export PATH="$PWD/scripts:$PATH"
     # Run the welcome prompt
     ./utils/prompt.sh
   '';

@@ -14,9 +14,15 @@ echo -e "$RESET$ORANGE"
 chafa ./img/KartozaNixOS.png --size=30x80 --colors=256 | sed 's/^/                  /'
 # Quick tips with icons
 echo -e "$RESET$ORANGE \n__________________________________________________________________\n"
+echo -e "${GREEN}Live preview (hot reload — use this while editing):$RESET"
+echo -e "   $GRAY▶$RESET  $GREEN preview$RESET                       - start Hugo dev server → ${CYAN}http://localhost:1313$RESET"
+echo -e "                                     (edits reload instantly; Ctrl-C to stop)"
+echo -e "$RESET$ORANGE \n__________________________________________________________________\n"
 echo -e "Quick Commands:$RESET"
+echo -e "   $GRAY▶$RESET  $CYAN preview$RESET                       - live preview with hot reload (recommended)"
+echo -e "   $GRAY▶$RESET  $CYAN hugo --minify$RESET                 - one-off production build into ./public"
+echo -e "   $GRAY▶$RESET  $CYAN nix run .#serve$RESET               - serve a built snapshot on :8000 (no live reload)"
 echo -e "   $GRAY▶$RESET  $CYAN nix build .#default$RESET          - build the package"
-echo -e "   $GRAY▶$RESET  $CYAN nix flake show$RESET               - Show available configurations"
 echo -e "   $GRAY▶$RESET  $CYAN nix flake check$RESET              - Run all checks"
 echo -e "$RESET$ORANGE \n__________________________________________________________________\n"
 if command -v pre-commit &>/dev/null; then

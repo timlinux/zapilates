@@ -9,15 +9,14 @@ end
 wk.register({
   p = {
     name = "Project",
-    s = { "<cmd>!hugo server -D &<cr>", "Start Hugo server" },
+    s = { "<cmd>!preview<cr>", "Live preview (hot reload)" },
     b = { "<cmd>!hugo --minify<cr>", "Build site" },
     d = { "<cmd>!cd docs && mkdocs serve &<cr>", "Start docs server" },
-    m = { "<cmd>!python scripts/migrate.py<cr>", "Run migration" },
     f = { "<cmd>!pre-commit run --all-files<cr>", "Format all" },
     g = { "<cmd>!git status<cr>", "Git status" },
     c = { "<cmd>!pre-commit run<cr>", "Pre-commit check" },
     n = { "<cmd>e content/<cr>", "Browse content" },
-    t = { "<cmd>e themes/cantolyrico-warm/<cr>", "Browse theme" },
+    t = { "<cmd>e themes/zapilates-studio/<cr>", "Browse theme" },
   },
 }, { prefix = "<leader>" })
 

@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#
+# preview — launch the Hugo live-preview server with hot reload.
+#
+# Watches the working tree and reloads the browser on every save, so what you
+# see always matches your edits. This is the command to use while developing.
+# (By contrast, `nix run .#serve` serves a one-off production build and does
+# NOT update as you edit.)
+#
+# Usage:  preview [port]        # default port 1313
+# Stop:   Ctrl-C
+#
+set -euo pipefail
+
+# Resolve the repository root from this script's own location, so `preview`
+# works no matter which directory it is invoked from.
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo_root="$(cd "${script_dir}/.." && pwd)"
+cd "${repo_root}"
+
+port="${1:-1313}"
+
+if ! command -v hugo >/dev/null 2>&1; then
+  echo "hugo not found. Enter the dev shell first with:  nix develop" >&2
+  exit 1
+fi
+
+echo "▶ Zapilates live preview → http://localhost:${port}  (hot reload; Ctrl-C to stop)"
+exec hugo server \
+  --buildDrafts \
+  --disableFastRender \
+  --bind 127.0.0.1 \
+  --port "${port}"

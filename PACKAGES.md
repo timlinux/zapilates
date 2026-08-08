@@ -56,14 +56,11 @@ Defined in `utils/develop.nix`, these packages are available in the development 
 | `marp-cli` | Markdown presentation tool |
 | `httplz` | Local HTTP server |
 
-### Python (Migration Tools)
+### Helper Scripts
 
-| Package | Purpose |
+| Command | Purpose |
 |---------|---------|
-| `python312` | Python runtime |
-| `python312Packages.beautifulsoup4` | HTML parsing |
-| `python312Packages.html2text` | HTML to Markdown conversion |
-| `python312Packages.pyyaml` | YAML processing |
+| `preview` | Launch the Hugo live-preview server with hot reload (`scripts/preview`) |
 
 ## Hugo Theme Dependencies
 
