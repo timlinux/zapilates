@@ -9,12 +9,21 @@
       <ul class="nav-list" data-nav-list>
         {{ range .Site.Menus.main }}
           {{ if ne .Identifier "contact" }}
-            <li>
-              <a href="{{ .URL | relURL }}"
-                 class="{{ if or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}is-active{{ end }}">
-                {{ .Name }}
-              </a>
-            </li>
+            {{ $active := or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}
+            {{ if .HasChildren }}
+              <li class="has-dropdown">
+                <a href="{{ .URL | relURL }}" class="nav-parent {{ if $active }}is-active{{ end }}" aria-haspopup="true">
+                  {{ .Name }}<span class="caret" aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown">
+                  {{ range .Children }}
+                    <li><a href="{{ .URL | relURL }}" class="{{ if eq $.RelPermalink .URL }}is-active{{ end }}">{{ .Name }}</a></li>
+                  {{ end }}
+                </ul>
+              </li>
+            {{ else }}
+              <li><a href="{{ .URL | relURL }}" class="{{ if $active }}is-active{{ end }}">{{ .Name }}</a></li>
+            {{ end }}
           {{ end }}
         {{ end }}
         <li>
@@ -31,11 +40,18 @@
 
     <div class="nav-mobile" data-nav-mobile>
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL | relURL }}"
-           class="{{ if or (eq $.RelPermalink .URL) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) }}is-active{{ end }}">
-          {{ .Name }}
-        </a>
+        {{ if ne .Identifier "contact" }}
+          {{ if .HasChildren }}
+            <span class="nav-mobile-group">{{ .Name }}</span>
+            {{ range .Children }}
+              <a class="nav-mobile-child {{ if eq $.RelPermalink .URL }}is-active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+            {{ end }}
+          {{ else }}
+            <a class="{{ if eq $.RelPermalink .URL }}is-active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+          {{ end }}
+        {{ end }}
       {{ end }}
+      <a class="nav-mobile-cta" href="{{ "/contact/" | relURL }}">Book · Enquire</a>
     </div>
   </div>
 </header>

@@ -23,65 +23,95 @@ theme = "zapilates-studio"
   instagram = "go_well_with_marcelle"
 
 [menu]
+  # ---- About ----
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
     weight = 10
-
   [[menu.main]]
-    identifier = "method"
+    parent = "about"
+    name = "About Marcelle"
+    url = "/about/"
+    weight = 11
+  [[menu.main]]
+    parent = "about"
     name = "The Method"
     url = "/about-pilates/"
-    weight = 20
+    weight = 12
+  [[menu.main]]
+    parent = "about"
+    name = "Studio"
+    url = "/studio/"
+    weight = 13
 
+  # ---- Classes ----
   [[menu.main]]
     identifier = "classes"
     name = "Classes"
     url = "/classes/"
-    weight = 30
-
+    weight = 20
   [[menu.main]]
-    identifier = "for-singers"
+    parent = "classes"
+    name = "Private"
+    url = "/classes/private/"
+    weight = 21
+  [[menu.main]]
+    parent = "classes"
+    name = "Group"
+    url = "/classes/group/"
+    weight = 22
+  [[menu.main]]
+    parent = "classes"
+    name = "Barre"
+    url = "/classes/barre/"
+    weight = 23
+  [[menu.main]]
+    parent = "classes"
+    name = "Remedial"
+    url = "/classes/remedial/"
+    weight = 24
+
+  # ---- For Performers ----
+  [[menu.main]]
+    identifier = "performers"
+    name = "For Performers"
+    url = "/for-singers/"
+    weight = 30
+  [[menu.main]]
+    parent = "performers"
     name = "For Singers"
     url = "/for-singers/"
-    weight = 40
-
+    weight = 31
   [[menu.main]]
-    identifier = "for-dancers"
+    parent = "performers"
     name = "For Dancers"
     url = "/for-dancers/"
-    weight = 45
-
+    weight = 32
   [[menu.main]]
-    identifier = "workshops"
+    parent = "performers"
     name = "Workshops"
     url = "/workshops/"
-    weight = 50
-
+    weight = 33
   [[menu.main]]
-    identifier = "thesis"
+    parent = "performers"
     name = "Research"
     url = "/thesis/"
-    weight = 55
+    weight = 34
 
-  [[menu.main]]
-    identifier = "studio"
-    name = "Studio"
-    url = "/studio/"
-    weight = 60
-
+  # ---- Journal ----
   [[menu.main]]
     identifier = "journal"
     name = "Journal"
     url = "/blog/"
-    weight = 70
+    weight = 40
 
+  # ---- Contact (rendered as the header CTA) ----
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 80
+    weight = 50
 
 [build]
   writeStats = true

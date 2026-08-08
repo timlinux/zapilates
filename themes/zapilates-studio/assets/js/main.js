@@ -77,6 +77,35 @@
       } catch (_) {}
     });
 
+    // Enquiry form — compose a prefilled email in the visitor's mail client.
+    // No backend required; degrades to the plain mailto link shown below it.
+    const enquiry = document.querySelector("[data-enquiry-form]");
+    if (enquiry) {
+      const params = new URLSearchParams(window.location.search);
+      const preset = params.get("interest");
+      const select = enquiry.querySelector('[name="interest"]');
+      if (preset && select) {
+        Array.from(select.options).forEach((o) => {
+          if (o.value.toLowerCase() === preset.toLowerCase()) o.selected = true;
+        });
+      }
+      enquiry.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const data = new FormData(enquiry);
+        const to = enquiry.getAttribute("data-email") || "marcelle@zapilates.com";
+        const topic = (data.get("interest") || "General enquiry").toString();
+        const body =
+          "Name: " + (data.get("name") || "").toString().trim() + "\n" +
+          "Email: " + (data.get("email") || "").toString().trim() + "\n" +
+          "Interested in: " + topic + "\n\n" +
+          (data.get("message") || "").toString().trim() + "\n";
+        window.location.href =
+          "mailto:" + to +
+          "?subject=" + encodeURIComponent("Zapilates enquiry — " + topic) +
+          "&body=" + encodeURIComponent(body);
+      });
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach((a) => {
       const href = a.getAttribute("href");
       if (!href || href === "#" || href === "#!") return;

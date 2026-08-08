@@ -1,13 +1,17 @@
 ---
 title: "Pilates for Stress"
 date: 2021-04-15
-author: "Marcelle Sutton"
+author: "Marcelle Volckaert"
 description: "How the parasympathetic nervous system, mindful movement and controlled breathing let Pilates help you break the stress chain reaction."
 tags: ["stress", "nervous system", "breathing", "mind-body"]
 image: "/images/pilates.png"
 ---
 
-Stress is a global buzzword — everyone is stressed these days. From students to the elderly, no one seems immune. Yet *being stressed* is a relatively new "phenomenon"; there is not even a word for it in Sanskrit. So what does it actually mean, and why is it a modern plague? Let's look at what is happening physiologically, and at what we can do about it.
+{{< lead >}}
+Stress is a global buzzword — yet it is a relatively new phenomenon; there is not even a word for it in Sanskrit. So what does it actually mean, and why is it a modern plague?
+{{< /lead >}}
+
+Everyone is stressed these days. From students to the elderly, no one seems immune. Let's look at what is happening physiologically, and at what we can do about it.
 
 ## What is it?
 

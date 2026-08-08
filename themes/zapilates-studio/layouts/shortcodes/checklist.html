@@ -1,0 +1,11 @@
+{{/* Checklist — a markdown bullet list rendered as a ticked, two-column grid.
+     Optional `title` renders an eyebrow above the list.
+     Usage:
+       {{< checklist title="Goals" >}}
+       - First point
+       - Second point
+       {{< /checklist >}} */}}
+<div class="checklist">
+  {{ with .Get "title" }}<span class="checklist-title eyebrow">{{ . }}</span>{{ end }}
+  {{ .Inner | markdownify }}
+</div>

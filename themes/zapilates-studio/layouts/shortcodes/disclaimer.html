@@ -1,0 +1,4 @@
+{{/* Small-print note — e.g. a medical disclaimer. Renders muted, bordered.
+     Usage: {{< disclaimer >}}Pilates supports wellbeing but is not a
+     substitute for medical care.{{< /disclaimer >}} */}}
+<p class="disclaimer">{{ .Inner | markdownify }}</p>

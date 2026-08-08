@@ -1,16 +1,29 @@
 {{/* Page hero — full-bleed image masthead with gradient overlay and light text.
      Uses the page's front-matter `image`, falling back to the site-wide
-     `heroImage` (the home-page hero) when a page sets none. Shared by
-     single.html and list.html (DRY). */}}
-{{ $eyebrow := cond (ne .Section "") (humanize .Section) "Zapilates" }}
+     `heroImage`. A breadcrumb trail replaces the old generic eyebrow, giving
+     each page a specific, wayfinding kicker. `imageFocus` front-matter sets the
+     object-position so portraits never crop badly. Shared by single + list. */}}
 {{ $showDate := and (eq .Kind "page") (in (slice "blog" "workshops") .Section) .Date }}
 {{ $image := or .Params.image .Site.Params.heroImage }}
+{{ $focus := .Params.imageFocus | default "center 30%" }}
+{{ $secTitle := "" }}
+{{ with .Section }}{{ $secTitle = humanize . }}{{ if eq . "blog" }}{{ $secTitle = "Journal" }}{{ end }}{{ end }}
 <header class="page-hero">
   <div class="page-hero-media">
-    <img src="{{ $image | relURL }}" alt="{{ .Title }}">
+    <img src="{{ $image | relURL }}" alt="{{ .Title }}" style="object-position: {{ $focus }};">
   </div>
   <div class="wrap page-hero-content">
-    <span class="page-hero-eyebrow">{{ $eyebrow }}</span>
+    {{ if not .IsHome }}
+    <nav class="page-hero-crumbs" aria-label="Breadcrumb">
+      <a href="{{ "/" | relURL }}">Home</a>
+      {{ if and .Section (eq .Kind "page") }}
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a href="{{ (printf "/%s/" .Section) | relLangURL }}">{{ $secTitle }}</a>
+      {{ end }}
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <span class="crumb-current" aria-current="page">{{ .Title }}</span>
+    </nav>
+    {{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-hero-description">{{ . }}</p>{{ end }}
     {{ if $showDate }}

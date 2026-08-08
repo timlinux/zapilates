@@ -13,9 +13,11 @@
   {{ end }}
 
   <div class="wrap">
-    {{ if .Pages }}
+    {{ $pages := .Pages.ByWeight }}
+    {{ if in (slice "blog" "workshops") .Section }}{{ $pages = .Pages.ByDate.Reverse }}{{ end }}
+    {{ if $pages }}
     <div class="list-grid">
-      {{ range .Pages.ByDate.Reverse }}
+      {{ range $pages }}
       <a class="list-card reveal" href="{{ .Permalink }}">
         {{ with .Params.image }}
         <div class="list-image">
@@ -39,6 +41,8 @@
       </a>
       {{ end }}
     </div>
+    {{ else }}
+    <p class="list-empty">More coming soon. In the meantime, <a href="{{ "/contact/" | relURL }}">get in touch</a> or explore the <a href="{{ "/classes/" | relURL }}">classes</a>.</p>
     {{ end }}
   </div>
 </section>

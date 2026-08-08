@@ -1,0 +1,12 @@
+{{/* Factsheet — a compact "at a glance" card for practical details.
+     Inner is a markdown bullet list of "**Label:** value" lines.
+     Optional `title` (default "At a glance").
+     Usage:
+       {{< factsheet title="At a glance" >}}
+       - **Format:** Small group, max 3
+       - **Course:** 10 lessons
+       {{< /factsheet >}} */}}
+<aside class="factsheet">
+  <span class="factsheet-title eyebrow">{{ .Get "title" | default "At a glance" }}</span>
+  {{ .Inner | markdownify }}
+</aside>

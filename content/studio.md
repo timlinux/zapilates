@@ -1,47 +1,35 @@
 ---
 title: "Pilates Studio"
-description: "Pilates Studio information and updates"
+description: "Where Marcelle currently teaches, plus studio news."
 image: "/images/IMG_1075.jpg"
 ---
 
-{{< figure src="/images/IMG_1075.jpg" alt="Pilates Studio" class="hero-image" >}}
+{{< lead >}}
+I currently teach Pilates at the Conservatório Annarella Sánchez, with online classes and workshops available on request.
+{{< /lead >}}
 
-## Pilates Studio
+The studio is relocating — I'm looking for a new home in the beautiful city of Lisbon, and will keep you updated when I find somewhere suitable.
 
-The studio is currently searching for a new home in the beautiful city of Lisbon. We will keep you updated when we find somewhere suitable!
+For years the studio was at the Ninho de Empresas in Santo António, Marvão — at the foot of the majestic Marvão Castle, nestled in the Natural Park — home to Pilates, Barre, equipment and Ballet classes.
 
----
+## Studio news
 
-Situated at the Ninho de Empresas in Santo Antonio, Marvao, at the foot of the majestic Marvao Castle, nestled in the Natural Park, is the space which is home to Pilates classes, Pilates Barre classes, Pilates Equipment classes and Ballet classes. The Ninho de Empresas is also home to a hairdresser and beauty therapist, making it an ideal place to stop to look after yourself from head to toe! We look forward to seeing you, so read on for Studio news and notices...
-
-**We are moving - The studio in Marvao has closed as Marcelle will be teaching Pilates at the Conservatorio Annarella Sanchez!**
-
-Online classes and workshops still available on request.
-
----
-
-## Studio News
-
-### The studio is growing!
-
-The lovely Jasmine Taeger has now joined the team and will be helping me with my social media, video and other general content. So, watch this space as we start to become more of a presence online!
-
----
+**The team is growing.** Jasmine Taeger has joined to help with social media, video and content — so watch this space as I build more of a presence online.
 
 ## Ballet
 
-**Laura Mendes**
+Ballet lessons for children are taught by Laura Mendes, with me stepping in when needed — giving students a combination of high-level ballet training and intensive technical focus. Get in touch to join either the advanced or the gentle classes.
 
-Ballet lessons for children are taught by Laura Mendes, with Marcelle taking the classes when Laura is unable to teach. This combination gives the students a perfect combination of high level ballet training and intensive technical focus.
+### Gallery
 
-Due to COVID19 restrictions we are currently operating a limited timetable. The Online classes are not affected for obvious reasons so please contact me should you wish to join either the advanced or the gentle classes. We look forward to being up and running in person again soon!
+![Pilates studio equipment](/images/IMG_0408.jpg)
 
-### Studio Gallery
-
-![Pilates Studio Equipment](/images/IMG_0408.jpg)
-
-![Studio Space](/images/IMG_9417.jpg)
+![Studio space](/images/IMG_9417.jpg)
 
 ![Pregnancy Pilates](/images/PilatesPregnancy.jpg)
 
-![Open Day Invitation](/images/OpneDayConvite.png)
+![Open day invitation](/images/OpneDayConvite.png)
+
+{{< cta href="/contact/" label="Enquire about the studio" >}}
+Online classes and workshops are available on request.
+{{< /cta >}}

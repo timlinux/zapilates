@@ -7,8 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Editorial content blocks** — new shortcodes (`lead`, `checklist`, `factsheet`,
+  `quote`, `signoff`, `cta`, `disclaimer`) that recompose every page into scannable,
+  on-brand chunks. All copy stays grounded in the original content.
+- **Information architecture** — class pages nested under `/classes/` (with aliases
+  for the old URLs) so they gain a parent, sibling ordering and nav visibility;
+  grouped dropdown navigation (About · Classes · For Performers · Journal + a Book
+  CTA) replacing the flat 10-item menu; breadcrumb wayfinding on every page; a
+  regrouped footer mirroring the nav; and an empty-state for list pages.
+- **Enquiry form** on the Contact page — composes a prefilled email in the visitor's
+  mail client (no backend, no dependencies), with a plain mailto fallback.
+
 ### Changed
 
+- Recomposed all page copy for flow and concision: unified first-person voice,
+  British spelling, de-duplicated the Research and For-Singers pages, reframed
+  testimonials and health claims responsibly, added a medical disclaimer, corrected
+  terminology, and brought pricing/format parity to the class pages. Dated
+  scaffolding removed (prices kept).
 - The `figure` shortcode no longer renders an image that matches the page's
   hero (front-matter `image` or the `heroImage` fallback) — that photo already
   leads the page in the masthead, so it is never repeated in the body.
