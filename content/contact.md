@@ -46,7 +46,7 @@ Lessons in **English**, with support in **Portuguese** and **Afrikaans** where r
 ## Other ways to reach me
 
 - **Email** — [marcelle@zapilates.com](mailto:marcelle@zapilates.com)
-- **Location** — Lisbon & Marvão, Portugal · online worldwide
+- **Location** — Leiria, Marvão & Lisbon, Portugal · online worldwide
 - **Instagram** — [@go_well_with_marcelle](https://www.instagram.com/go_well_with_marcelle/)
 
 ## Booking notes
