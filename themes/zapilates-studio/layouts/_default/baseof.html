@@ -28,12 +28,8 @@
 
   <link rel="canonical" href="{{ .Permalink }}">
 
-  {{/* Fonts — Fraunces (variable, opsz + SOFT) + Inter + IBM Plex Mono */}}
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  {{/* Fonts are self-hosted (bundled woff2 in /fonts, @font-face in the SCSS) —
+       no third-party CDN. */}}
 
   {{/* Compiled SCSS */}}
   {{ $scss := resources.Get "scss/main.scss" }}
