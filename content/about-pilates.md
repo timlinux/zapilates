@@ -63,7 +63,7 @@ Pilates supports your well-being, but is not a substitute for medical care. If y
 
 ## Online teaching
 
-After some scepticism about the transferability of my usually very *hands-on* approach to an online format, I have discovered — as you do when you open your mind to new possibilities — that its beauty is that it cuts down on travel and carbon emissions, and lets me connect with clients all over the world. Apart from time-zone issues, there are few barriers to a successful class.
+Teaching online lets me work with clients anywhere in the world, while cutting down on travel and carbon emissions.
 
 {{< cta href="/contact/" label="Discuss your goals" >}}
 Interested in the physical and mental benefits Pilates can bring? Let's discuss your aspirations and goals — so we can get you moving freely and enjoying life at its best.
