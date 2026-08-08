@@ -2,6 +2,7 @@
 title: "Remedial Pilates"
 description: "Remedial Pilates for diagnosed back, neck and hip problems."
 image: "/images/pilates-remedial-page.jpg"
+imageFocus: "center 38%"
 weight: 4
 aliases: ["/remedial/"]
 ---
@@ -25,7 +26,7 @@ Remedial lessons focus intensively on individual corrections, in small groups of
 - Small-group lessons — only three people per class, over a ten-lesson course
 - Suitable for diagnosed back, neck and hip problems
 - Intensive focus on individual corrections
-- A high success rate with a highly qualified, experienced teacher
+- Individual attention from a highly qualified, experienced teacher
 {{< /checklist >}}
 
 {{< factsheet title="At a glance" >}}
@@ -50,7 +51,7 @@ I have suffered all my life from a weak back. That I have persevered is entirely
 Please get your doctor's permission before starting. Remedial Pilates supports your well-being and rehabilitation, but is not a substitute for medical care.
 {{< /disclaimer >}}
 
-{{< cta href="/contact/" label="Discuss remedial Pilates" >}}
+{{< cta href="/contact/?interest=Remedial%20Pilates" label="Discuss remedial Pilates" >}}
 Have your doctor's clearance to hand and be ready to describe your issue, so we can discuss suitability before the first session.
 {{< /cta >}}
 

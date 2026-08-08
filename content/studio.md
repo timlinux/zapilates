@@ -10,7 +10,7 @@ I currently teach Pilates at the Conservatório Annarella Sánchez, with online 
 
 The studio is relocating — I'm looking for a new home in the beautiful city of Lisbon, and will keep you updated when I find somewhere suitable.
 
-For years the studio was at the Ninho de Empresas in Santo António, Marvão — at the foot of the majestic Marvão Castle, nestled in the Natural Park — home to Pilates, Barre, equipment and Ballet classes.
+For years the studio was at the Ninho de Empresas in Santo António, Marvão — at the foot of the majestic Marvão Castle, nestled in the Natural Park — home to Pilates, barre, equipment and ballet classes.
 
 ## Studio news
 

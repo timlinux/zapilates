@@ -40,6 +40,38 @@
       });
     }
 
+    // Desktop grouped dropdowns — keyboard/touch support + aria-expanded.
+    const coarse = window.matchMedia("(hover: none)").matches;
+    document.querySelectorAll(".has-dropdown").forEach((dd) => {
+      const link = dd.querySelector(".nav-parent");
+      if (!link) return;
+      link.setAttribute("aria-expanded", "false");
+
+      if (coarse) {
+        link.addEventListener("click", (e) => {
+          if (dd.classList.contains("is-open")) return; // second tap follows the link
+          e.preventDefault();
+          document.querySelectorAll(".has-dropdown.is-open").forEach((o) => {
+            if (o !== dd) {
+              o.classList.remove("is-open");
+              const l = o.querySelector(".nav-parent");
+              if (l) l.setAttribute("aria-expanded", "false");
+            }
+          });
+          dd.classList.add("is-open");
+          link.setAttribute("aria-expanded", "true");
+        });
+      }
+
+      dd.addEventListener("focusin", () => link.setAttribute("aria-expanded", "true"));
+      dd.addEventListener("focusout", () => {
+        if (!dd.contains(document.activeElement)) {
+          dd.classList.remove("is-open");
+          link.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+
     const reveals = document.querySelectorAll(".reveal");
     if (reveals.length && "IntersectionObserver" in window) {
       const io = new IntersectionObserver(
@@ -89,8 +121,10 @@
           if (o.value.toLowerCase() === preset.toLowerCase()) o.selected = true;
         });
       }
+      const status = enquiry.querySelector("[data-enquiry-status]");
       enquiry.addEventListener("submit", (e) => {
         e.preventDefault();
+        if (!enquiry.reportValidity()) return; // native required-field validation
         const data = new FormData(enquiry);
         const to = enquiry.getAttribute("data-email") || "marcelle@zapilates.com";
         const topic = (data.get("interest") || "General enquiry").toString();
@@ -103,6 +137,10 @@
           "mailto:" + to +
           "?subject=" + encodeURIComponent("Zapilates enquiry — " + topic) +
           "&body=" + encodeURIComponent(body);
+        if (status) {
+          status.textContent =
+            "Opening your email app… if nothing happens, write to " + to + ".";
+        }
       });
     }
 

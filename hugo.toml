@@ -76,7 +76,7 @@ theme = "zapilates-studio"
   [[menu.main]]
     identifier = "performers"
     name = "For Performers"
-    url = "/for-singers/"
+    url = "/for-performers/"
     weight = 30
   [[menu.main]]
     parent = "performers"
@@ -96,7 +96,7 @@ theme = "zapilates-studio"
   [[menu.main]]
     parent = "performers"
     name = "Research"
-    url = "/thesis/"
+    url = "/research/"
     weight = 34
 
   # ---- Journal ----

@@ -39,6 +39,7 @@ Lessons in **English**, with support in **Portuguese** and **Afrikaans** where r
     <textarea id="ef-message" name="message" rows="5" placeholder="Where your body is now, and where you'd like it to be…"></textarea>
   </div>
   <button type="submit" class="btn btn--primary cta-ember">Send enquiry</button>
+  <p class="enquiry-status" data-enquiry-status role="status" aria-live="polite"></p>
   <p class="enquiry-fallback">This opens your email app, ready to send. Prefer to write directly? <a href="mailto:marcelle@zapilates.com">marcelle@zapilates.com</a></p>
 </form>
 

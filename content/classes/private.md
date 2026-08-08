@@ -2,6 +2,7 @@
 title: "Private Pilates"
 description: "One-to-one Pilates instruction, tailored entirely to you."
 image: "/images/IMG_9417.jpg"
+imageFocus: "center 22%"
 weight: 1
 aliases: ["/private/"]
 ---
@@ -27,7 +28,7 @@ A private session is shaped entirely around how your body works and what you wan
 - **Price:** On enquiry — discussed at booking
 {{< /factsheet >}}
 
-{{< cta href="/contact/" label="Book a private session" >}}
+{{< cta href="/contact/?interest=Private%20Pilates" label="Book a private session" >}}
 Tell me what you're working towards, and we'll shape your sessions around it.
 {{< /cta >}}
 

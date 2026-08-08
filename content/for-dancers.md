@@ -24,6 +24,6 @@ I run workshops and teach dancers how the Pilates method can help with the issue
 
 Booking for a company or school? See [Workshops](/workshops/) for group and institutional sessions.
 
-{{< cta href="/contact/" label="Enquire about dance work" >}}
+{{< cta href="/contact/?interest=Pilates%20for%20dancers" label="Enquire about dance work" >}}
 Whether it's injury rehab, technique or confidence — tell me what you're dancing towards.
 {{< /cta >}}

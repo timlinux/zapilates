@@ -31,7 +31,7 @@ For singers with issues such as muscle tension dysphonia or stage fright, I offe
 - A foundation for mind-body communication
 {{< /checklist >}}
 
-The research behind this work is [documented here](/thesis/), with an overview in the [Post-ip journal](https://proa.ua.pt/index.php/postip/issue/view/711).
+The research behind this work is [documented here](/research/), with an overview in the [Post-ip journal](https://proa.ua.pt/index.php/postip/issue/view/711).
 
 {{< quote cite="Prof. H.S." >}}
 Thank you for your inspiring work with us!
@@ -41,6 +41,6 @@ Thank you for your inspiring work with us!
 My voice and my heart are doing FANTASTIC.
 {{< /quote >}}
 
-{{< cta href="/contact/" label="Work with Marcelle" >}}
+{{< cta href="/contact/?interest=Pilates%20for%20singers" label="Work with Marcelle" >}}
 Tell me your instrument and the tension patterns you're working with, and we'll design a programme around them.
 {{< /cta >}}

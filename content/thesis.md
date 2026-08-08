@@ -4,6 +4,8 @@ description: "MMus (cum laude) — Marcelle Volckaert's research on a Pilates wa
 image: "/images/pilates-for-singers.jpg"
 weight: 15
 date: 2019-09-06
+url: "/research/"
+aliases: ["/thesis/"]
 ---
 
 {{< lead >}}

@@ -45,19 +45,19 @@ However, once we understand what triggers these two systems, we have tools to he
 
 ## What to do
 
-**Movement** is one of the best stress relievers we have, because it allows the body to complete the stress-response cycle and return to equilibrium. As a tool, we need to be careful with movement, because an over-zealous amygdala must be taught how to react. **Mind/body exercises** excel at creating a balanced neural response to movement because of their use of breathing.
+**Movement** is one of the best stress relievers we have, because it allows the body to complete the stress-response cycle and return to equilibrium. As a tool, we need to be careful with movement, because an over-zealous amygdala must be taught how to react. **Mind-body exercises** excel at creating a balanced neural response to movement because of their use of breathing.
 
 A good stress-management programme will always use movement as the first *go-to* tool, because it helps the body release built-up tension and adrenaline. Because Pilates uses a **controlled breathing pattern**, both the mind and the body are forced to slow down — and this in turn calms the reactions and triggers the parasympathetic nervous system to initiate a return to equilibrium. I say *forced* because even if our thoughts are racing when we start a Pilates class, by controlling the breathing pattern and working on the spine we are channelling our nervous-system responses and intervening in our stressful chain-reaction patterns. By creating a state of calm we recharge mentally, reset our nervous system, and build both physical and mental resilience.
 
-A quiet, focused Pilates session — however long — is almost guaranteed to help calm a stress response. Once it becomes a regular practice, we have a reliable tool: a favourite exercise, a breathing pattern, a class, or a teacher, to help us overcome an uncontrolled stressed reaction.
+A quiet, focused Pilates session — however long — can help calm a stress response. Once it becomes a regular practice, we have a reliable tool: a favourite exercise, a breathing pattern, a class, or a teacher, to help us overcome an uncontrolled stressed reaction.
 
 With time, we find harmony in ourselves and in our interactions with society again. We can hopefully do all the other things we are told to do to minimise stress — some tech-free time, turning off social media, spending time in nature. Once we start to breathe for our parasympathetic nervous system and learn to manage our stress, we can start to make the decisions we are told will make our lives better.
 
-But it takes doing something differently to react differently — so try having a mind/body moment and see how you feel. It can be as easy as inhale, and exhale.
+But it takes doing something differently to react differently — so try having a mind-body moment and see how you feel. It can be as easy as inhale, and exhale.
 
 ## Try this now (51 seconds)
 
-If you don't have much time, try this short exercise to help relax your spine, ribcage and mind.
+If you don't have much time, try this short exercise to help relax your spine, rib cage and mind.
 
 {{< youtube Dl0aJLz50WQ >}}
 

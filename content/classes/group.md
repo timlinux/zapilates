@@ -2,6 +2,7 @@
 title: "Group Pilates"
 description: "Small-group Pilates matwork and equipment classes."
 image: "/images/PilatesPregnancy.jpg"
+imageFocus: "center 42%"
 weight: 2
 aliases: ["/group/"]
 ---
@@ -28,7 +29,7 @@ Group classes give you the momentum of a shared practice while staying small eno
 - **Price:** On enquiry — discussed at booking
 {{< /factsheet >}}
 
-{{< cta href="/contact/" label="Join a group class" >}}
+{{< cta href="/contact/?interest=Group%20Pilates" label="Join a group class" >}}
 Come and move with others — ask about the current timetable and find a class that fits.
 {{< /cta >}}
 

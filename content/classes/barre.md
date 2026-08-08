@@ -2,6 +2,7 @@
 title: "Pilates Barre"
 description: "Online, instructor-led, Pilates-based, ballet-inspired barre and chair classes."
 image: "/images/pilates-barre-page.jpg"
+imageFocus: "center 18%"
 weight: 3
 aliases: ["/barre/"]
 ---
@@ -41,7 +42,7 @@ Online, instructor-led classes that combine beautiful music, ballet and Pilates 
 A perfect blend of creative, technical and physical challenge to keep me completely engaged for the full hour — all to some really great classical music.
 {{< /quote >}}
 
-{{< cta href="/contact/" label="Enquire about Barre" >}}
+{{< cta href="/contact/?interest=Pilates%20Barre" label="Enquire about Barre" >}}
 Ready to move? Bring a chair and a little space — I'll bring the music and the method.
 {{< /cta >}}
 

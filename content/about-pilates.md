@@ -19,7 +19,11 @@ The Pilates method of exercise is taught by many people in many different ways a
 
 Because the method has been around so long — taught by many people over many continents, and because Joseph drew heavily on other methods including Yoga — it is not always easy to explain exactly what Pilates *is*. But it has certain principles that underlie it. I follow the **Pilates Conditioning** and the **STOTT Pilates** systems to a great extent, although much of what and how I teach is determined by the pupil and, of course, by my own personality, philosophy, experience and teaching style.
 
-The word **"integrity"** is described in the *Chambers Concise 20th Century Dictionary* as *"entireness, wholeness: the unimpaired state of anything: uprightness: honesty: purity."* This definition, I feel, is very fitting for the Pilates method.
+{{< quote cite="Integrity — Chambers Concise 20th Century Dictionary" >}}
+Entireness, wholeness: the unimpaired state of anything: uprightness: honesty: purity.
+{{< /quote >}}
+
+This definition, I feel, is very fitting for the Pilates method.
 
 ## The principles
 
@@ -33,7 +37,7 @@ This is achieved through the application of certain principles that underlie the
 
 **Lateral breathing.** Breathing is used as a catalyst for many of these underlying principles. Many disciplines, especially those dealing with relaxation, use breathing to channel concentration and effort. When you are focused on how you are breathing, you are far less likely to be replaying your to-do list at the same time. This allows you to mentally relax, which allows you to focus on the task at hand, which enables physical relaxation to follow.
 
-Lateral breathing also frees the rib cage and thoracic spine by creating movement and suppleness — which in turn promotes relaxation, among other things. Activating the **parasympathetic nervous system** brings calming, mind-settling benefits that many people value in a Pilates practice. Breathing through movements prevents tension from building up and distorting the body's alignment, letting movements flow gracefully. Breathing laterally is also one of the best ways of creating that girdle of strength — an outbreath reminds one to engage *transversus abdominis*, one of the most important posture-stabilising muscles.
+Lateral breathing also frees the rib cage and thoracic spine by creating movement and suppleness — which in turn promotes relaxation, among other things. Activating the **parasympathetic nervous system** brings calming, mind-settling benefits that many people value in a Pilates practice. Breathing through movements prevents tension from building up and distorting the body's alignment, letting movements flow gracefully. Breathing laterally is also one of the best ways of creating that girdle of strength — an out-breath reminds you to engage *transversus abdominis*, one of the most important posture-stabilising muscles.
 
 ## Who it's for
 
