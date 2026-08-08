@@ -1,0 +1,35 @@
+{{/* Page hero — full-bleed image masthead with gradient overlay and light text.
+     Falls back to the plain bone-background text masthead when the page has no
+     `image` in front matter. Shared by single.html and list.html (DRY). */}}
+{{ $eyebrow := cond (ne .Section "") (humanize .Section) "Zapilates" }}
+{{ $showDate := and (eq .Kind "page") (in (slice "blog" "workshops") .Section) .Date }}
+{{ with .Params.image }}
+<header class="page-hero">
+  <div class="page-hero-media">
+    <img src="{{ . | relURL }}" alt="{{ $.Title }}">
+  </div>
+  <div class="wrap page-hero-content">
+    <span class="page-hero-eyebrow">{{ $eyebrow }}</span>
+    <h1>{{ $.Title }}</h1>
+    {{ with $.Description }}<p class="page-hero-description">{{ . }}</p>{{ end }}
+    {{ if $showDate }}
+    <time class="page-hero-date" datetime="{{ $.Date.Format "2006-01-02" }}">
+      {{ $.Date.Format "2 January 2006" }}
+    </time>
+    {{ end }}
+  </div>
+</header>
+{{ else }}
+<header class="page-masthead">
+  <div class="wrap">
+    <span class="eyebrow page-eyebrow">{{ $eyebrow }}</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+    {{ if $showDate }}
+    <time class="page-date" datetime="{{ .Date.Format "2006-01-02" }}">
+      {{ .Date.Format "2 January 2006" }}
+    </time>
+    {{ end }}
+  </div>
+</header>
+{{ end }}

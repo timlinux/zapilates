@@ -1,23 +1,6 @@
 {{ define "main" }}
 <article class="single">
-  <header class="page-masthead">
-    <div class="wrap">
-      <span class="eyebrow page-eyebrow">
-        {{ with .Section }}{{ humanize . }}{{ else }}Zapilates{{ end }}
-      </span>
-      <h1>{{ .Title }}</h1>
-      {{ with .Description }}
-      <p class="page-description">{{ . }}</p>
-      {{ end }}
-      {{ if and .Date (not .IsHome) }}
-        {{ if in (slice "blog" "workshops") .Section }}
-          <time class="page-date" datetime="{{ .Date.Format "2006-01-02" }}">
-            {{ .Date.Format "2 January 2006" }}
-          </time>
-        {{ end }}
-      {{ end }}
-    </div>
-  </header>
+  {{ partial "page-hero.html" . }}
 
   <div class="page-body">
     <div class="wrap">

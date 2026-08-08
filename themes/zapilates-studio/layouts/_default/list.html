@@ -1,14 +1,6 @@
 {{ define "main" }}
 <section class="list">
-  <header class="page-masthead">
-    <div class="wrap">
-      <span class="eyebrow page-eyebrow">Zapilates</span>
-      <h1>{{ .Title }}</h1>
-      {{ with .Description }}
-      <p class="page-description">{{ . }}</p>
-      {{ end }}
-    </div>
-  </header>
+  {{ partial "page-hero.html" . }}
 
   {{ if .Content }}
   <div class="page-body" style="padding-bottom: 0;">
