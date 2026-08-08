@@ -195,7 +195,7 @@
 
       <a class="specialism reveal" href="{{ "/workshops/" | relURL }}">
         <div class="specialism-image">
-          <img src="{{ "/images/e9c32c5e9242d8f6300dc90b44c3ede4_719x309.jpg" | relURL }}" alt="Pilates workshops" loading="lazy">
+          <img src="{{ "/images/IMG_1075.jpg" | relURL }}" alt="Pilates workshops" loading="lazy">
         </div>
         <span class="eyebrow">Workshops</span>
         <h3>For musicians and ensembles.</h3>
@@ -273,39 +273,6 @@
     </div>
   </div>
 </section>
-
-{{/* ================================================================
-     JOURNAL PREVIEW
-     ================================================================ */}}
-{{ $journal := where .Site.RegularPages "Section" "blog" }}
-{{ if $journal }}
-<section class="band">
-  <div class="wrap">
-    <header class="section-head section-head--split reveal">
-      <div>
-        <span class="eyebrow">Journal</span>
-        <h2 class="section-title">Notes on the body.</h2>
-      </div>
-      <a class="btn btn--ghost" href="{{ "/blog/" | relURL }}">All entries</a>
-    </header>
-
-    <div class="journal-preview">
-      {{ range first 2 $journal }}
-        <a class="journal-card reveal" href="{{ .Permalink }}">
-          <div class="journal-image">
-            <img src="{{ .Params.image | default "/images/pilates.png" | relURL }}" alt="{{ .Title }}" loading="lazy">
-          </div>
-          <span class="journal-meta">
-            {{ with .Params.author }}{{ . }} · {{ end }}{{ .Date.Format "January 2006" }}
-          </span>
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Description | default (.Summary | truncate 160) }}</p>
-        </a>
-      {{ end }}
-    </div>
-  </div>
-</section>
-{{ end }}
 
 {{/* ================================================================
      CTA BAND

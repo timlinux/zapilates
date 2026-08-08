@@ -1,7 +1,7 @@
 ---
 title: "Workshops"
 description: "Pilates workshops for musicians, singers, dancers and specialists — hosted internationally and at Marvão."
-image: "/images/e9c32c5e9242d8f6300dc90b44c3ede4_719x309.jpg"
+image: "/images/IMG_1075.jpg"
 weight: 20
 ---
 

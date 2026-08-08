@@ -39,11 +39,6 @@ theme = "zapilates-studio"
     name = "The Method"
     url = "/about-pilates/"
     weight = 12
-  [[menu.main]]
-    parent = "about"
-    name = "Studio"
-    url = "/studio/"
-    weight = 13
 
   # ---- Classes ----
   [[menu.main]]
@@ -98,13 +93,6 @@ theme = "zapilates-studio"
     name = "Research"
     url = "/research/"
     weight = 34
-
-  # ---- Journal ----
-  [[menu.main]]
-    identifier = "journal"
-    name = "Journal"
-    url = "/blog/"
-    weight = 40
 
   # ---- Contact (rendered as the header CTA) ----
   [[menu.main]]
