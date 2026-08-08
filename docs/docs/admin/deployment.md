@@ -21,28 +21,23 @@ hugo --minify
 # Output is in the public/ directory
 ```
 
-## Netlify (Alternative)
+## Nix Build
 
-For Stripe integration, Netlify is recommended.
+The site can also be built reproducibly as a Nix derivation:
 
-### Setup
+```bash
+# Build the site
+nix build
 
-1. Connect your GitHub repository
-2. Configure build settings:
-   - Build command: `hugo --minify`
-   - Publish directory: `public`
-3. Add environment variables for Stripe
-
-### Environment Variables
-
+# Output is a Nix-store symlink at ./result/
 ```
-STRIPE_SECRET_KEY=sk_live_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-```
+
+For NixOS hosting, consume the flake and enable the `services.zapilates`
+module (see `README.md`).
 
 ## DNS Configuration
 
-Point your domain to GitHub Pages or Netlify:
+Point your domain to GitHub Pages:
 
-- GitHub Pages: Add CNAME file to `static/`
-- Netlify: Configure in dashboard
+- Add a `CNAME` file to `static/` with your domain
+- Configure the A/CNAME records with your DNS provider

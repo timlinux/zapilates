@@ -121,7 +121,7 @@ zapilates.com/
 ## Content sources
 
 - **Marcelle's biography, class copy, and testimonials** — carried forward from the previous cantolyrico.com Hugo project (pilates section)
-- **About Pilates (The Method), Pilates Bio, and "Pilates for Stress" blog post** — extracted from the archived Squarespace mirror in `cantolyrico-mirror/`
+- **About Pilates (The Method) and "Pilates for Stress" blog post** — extracted from the archived Squarespace mirror in `cantolyrico-mirror/` (a gitignored, local-only migration source). Marcelle's biography is consolidated into the single **About Marcelle** page (`content/about.md`); the earlier duplicate "Pilates Bio" page was removed.
 - **Thesis material** — extracted from `cantolyrico-mirror/cantolyrico.com/performances/2019/9/6/mmus-pending.html`
 - **Workshop pages** — reconstructed from the previous performances markdown files with pilates tag
 

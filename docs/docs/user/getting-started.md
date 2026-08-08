@@ -1,31 +1,36 @@
 # Getting Started
 
-Welcome to Canto Lyrico! This guide will help you navigate the site.
+Welcome to Zapilates! This guide will help you navigate the site.
 
 ## Site Sections
 
-### Classical Singing
+### The Method
 
-Browse Marcelle's performance history, listen to recordings, and watch videos.
-
-- **Diary of Events** - Complete performance archive
-- **Musical Notes** - Audio recordings (OPUS SOBRIETATE collection)
-- **Videos** - Video performances
-
-### Pilates
-
-Learn about Marcelle's Pilates instruction and services.
+Learn about the Pilates method and the principles that underpin it.
 
 - **About Pilates** - Introduction to the method
-- **Services** - Private, group, barre, and remedial sessions
-- **For Singers** - Specialized training for vocalists
-- **For Dancers** - Specialized training for dancers
+- **Research** - MMus thesis on Pilates warm-ups for classical singers
 
-### Buy Classes
+### Classes
 
-Book Pilates sessions online via secure Stripe checkout.
+Explore Marcelle's Pilates instruction and services.
+
+- **Private** - One-to-one sessions
+- **Group** - Small-group classes
+- **Barre** - Pilates barre
+- **Remedial** - Rehabilitation and remedial work
+
+### Specialisms
+
+- **For Singers** - Specialised training for vocalists
+- **For Dancers** - Specialised training for dancers
+- **Workshops** - Pilates for musicians and other programmes
+
+### Journal
+
+Long-form writing on movement, breath, and the nervous system.
 
 ## Contact
 
 Questions? Visit the [Contact](/contact/) page or email
-[info@cantolyrico.com](mailto:info@cantolyrico.com).
+[marcelle@zapilates.com](mailto:marcelle@zapilates.com).

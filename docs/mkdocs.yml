@@ -1,10 +1,10 @@
-site_name: Canto Lyrico Documentation
-site_description: Documentation for the Canto Lyrico website
+site_name: Zapilates Documentation
+site_description: Documentation for the Zapilates website
 site_author: Marcelle Volckaert
-site_url: https://timlinux.github.io/cantolyrico.com/
+site_url: https://timlinux.github.io/zapilates/
 
-repo_name: timlinux/cantolyrico.com
-repo_url: https://github.com/timlinux/cantolyrico.com
+repo_name: timlinux/zapilates
+repo_url: https://github.com/timlinux/zapilates
 
 theme:
   name: material
@@ -25,7 +25,6 @@ nav:
   - User Guide:
     - Getting Started: user/getting-started.md
     - Navigation: user/navigation.md
-    - Audio Player: user/audio-player.md
   - Administrator Guide:
     - Deployment: admin/deployment.md
     - Configuration: admin/configuration.md
@@ -48,6 +47,6 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/timlinux/cantolyrico.com
+      link: https://github.com/timlinux/zapilates
 
-copyright: "&copy; Canto Lyrico. All rights reserved."
+copyright: "&copy; Zapilates. All rights reserved."

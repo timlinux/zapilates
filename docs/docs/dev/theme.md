@@ -3,7 +3,7 @@
 ## Theme Structure
 
 ```
-themes/cantolyrico-warm/
+themes/zapilates-studio/
 ├── theme.toml          # Theme metadata
 ├── layouts/
 │   ├── _default/
@@ -15,9 +15,8 @@ themes/cantolyrico-warm/
 │   │   ├── header.html
 │   │   └── footer.html
 │   └── shortcodes/
-│       ├── audio-player.html
-│       ├── youtube.html
-│       └── stripe-buy.html
+│       ├── figure.html
+│       └── youtube.html
 └── assets/
     ├── scss/
     │   └── main.scss
@@ -27,37 +26,33 @@ themes/cantolyrico-warm/
 
 ## Design System
 
-### Colors
+**Design intent** — editorial, movement-forward, quiet. Inspired by
+STOTT / Merrithew, Balanced Body, and boutique studio brands.
+
+### Colours (design tokens)
 
 ```scss
-$terracotta: #C67C4E;    // Primary
-$warm-cream: #FAF3E3;    // Background
-$soft-gold: #D4A853;     // Accent
-$deep-burgundy: #6B2D3C; // Secondary
-$sage-green: #8B9A71;    // Pilates accent
-$warm-gray: #6B6257;     // Text
+--ink:       #1a1a1c;  // Text; footer + CTA background
+--ink-soft:  #33323a;  // Secondary text
+--ink-muted: #6c6a72;  // Metadata, eyebrows
+--mist:      #ded8cc;  // Hairlines, borders
+--bone:      #f4efe6;  // Primary paper background
+--bone-deep: #e8dfcd;  // Band variation
+--sage:      #6f7d5e;  // Secondary accent
+--rust:      #b1583a;  // Primary accent — CTAs, italic display accents
+--rust-deep: #862f14;  // Hover state
 ```
 
 ### Typography
 
-- Headings: Cormorant Garamond
-- Body: Source Sans 3
-- Accents: Libre Baskerville
-
-### Spacing Scale
-
-```scss
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-$spacing-2xl: 3rem;
-```
+- **Display**: Fraunces (variable serif, `opsz` + `SOFT` axes)
+- **Body & UI**: Inter
+- **Metadata**: IBM Plex Mono
 
 ## Adding Styles
 
-Edit `assets/scss/main.scss` and Hugo will automatically recompile.
+Edit `assets/scss/main.scss` and Hugo will automatically recompile via
+Hugo Pipes (Dart Sass).
 
 ## Adding JavaScript
 

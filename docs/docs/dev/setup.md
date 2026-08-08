@@ -22,8 +22,8 @@ experimental-features = nix-command flakes
 
 ```bash
 # Clone the repository
-git clone https://github.com/timlinux/cantolyrico.com.git
-cd cantolyrico.com
+git clone git@github.com:timlinux/zapilates.git
+cd zapilates
 
 # Enter development shell
 nix develop

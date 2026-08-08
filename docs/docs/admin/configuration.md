@@ -7,26 +7,29 @@ The main configuration is in `hugo.toml`.
 ### Site Settings
 
 ```toml
-baseURL = "https://cantolyrico.com/"
-languageCode = "en-ZA"
-title = "Canto Lyrico"
-theme = "cantolyrico-warm"
+baseURL = "https://zapilates.com/"
+languageCode = "en"
+title = "Zapilates"
+theme = "zapilates-studio"
 ```
 
 ### Parameters
 
 ```toml
 [params]
-  tagline = "Marcelle Volckaert, Classical Singer & Movement Specialist"
+  tagline = "Pilates with Marcelle Volckaert"
   description = "..."
   author = "Marcelle Volckaert"
-  location = "Marvão, Portugal"
-  email = "info@cantolyrico.com"
+  location = "Lisbon & Marvão, Portugal"
+  email = "marcelle@zapilates.com"
+
+  # Stats strip (shown on home page)
+  yearsTeaching = "20+"
+  continents = "3"
+  languages = "3"
 
   # Social
-  twitter = "CantoLyrico"
   instagram = "go_well_with_marcelle"
-  facebook = "..."
 ```
 
 ### Menu
@@ -35,17 +38,18 @@ Edit the `[menu]` section to modify navigation.
 
 ## Theme Configuration
 
-Theme files are in `themes/cantolyrico-warm/`.
+Theme files are in `themes/zapilates-studio/`.
 
-### Colors
+### Colours
 
-Edit `assets/scss/main.scss` to change colors:
+Edit `assets/scss/main.scss` to change colours. The palette is defined as
+CSS custom properties (design tokens):
 
 ```scss
-$terracotta: #C67C4E;
-$warm-cream: #FAF3E3;
-$soft-gold: #D4A853;
-$deep-burgundy: #6B2D3C;
-$sage-green: #8B9A71;
-$warm-gray: #6B6257;
+--ink:    #1a1a1c;  // Text; footer + CTA background
+--mist:   #ded8cc;  // Hairlines, borders
+--bone:   #f4efe6;  // Primary paper background
+--sage:   #6f7d5e;  // Secondary accent
+--rust:   #b1583a;  // Primary accent — CTAs, italic display accents
+--rust-deep: #862f14; // Hover state
 ```

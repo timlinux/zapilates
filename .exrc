@@ -1,4 +1,4 @@
-" Canto Lyrico - Neovim project configuration
+" Zapilates - Neovim project configuration
 " All shortcuts under <leader>p prefix
 
 " Hugo server
