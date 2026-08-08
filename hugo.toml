@@ -2,6 +2,7 @@ baseURL = "https://zapilates.com/"
 languageCode = "en"
 title = "Zapilates"
 theme = "zapilates-studio"
+disableKinds = ["taxonomy", "term"]
 
 [params]
   tagline = "Pilates with Marcelle Volckaert"
@@ -111,12 +112,11 @@ theme = "zapilates-studio"
   [markup.highlight]
     style = "github"
 
+
 [outputs]
   home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
 
-[taxonomies]
-  tag = "tags"
 
 [minify]
   disableCSS = false

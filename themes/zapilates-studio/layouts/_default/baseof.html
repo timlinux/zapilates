@@ -36,8 +36,9 @@
   {{ $style := $scss | css.Sass (dict "transpiler" "dartsass" "outputStyle" "compressed") | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-  {{/* Favicon */}}
-  <link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
+  {{/* Favicon — self-hosted SVG, no external request */}}
+  <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | relURL }}">
+  <link rel="mask-icon" href="{{ "/favicon.svg" | relURL }}" color="#1a1a1c">
 
   {{ block "head" . }}{{ end }}
 </head>

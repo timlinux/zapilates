@@ -57,26 +57,28 @@
     onScroll();
     window.addEventListener("scroll", requestScroll, { passive: true });
 
+    // Keyboard focus must always bring the auto-hidden header back into view.
+    if (header) header.addEventListener("focusin", () => header.classList.remove("is-hidden"));
+
     /* ---------------------------------------------------------------------
      * Mobile peel menu
      * ------------------------------------------------------------------- */
     const toggle = document.querySelector("[data-nav-toggle]");
     const mobile = document.querySelector("[data-nav-mobile]");
     if (toggle && mobile) {
-      toggle.addEventListener("click", () => {
-        const open = mobile.classList.toggle("is-open");
+      // When closed, take the whole menu out of the tab order / a11y tree.
+      const setOpen = (open) => {
+        mobile.classList.toggle("is-open", open);
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-      mobile.querySelectorAll("a").forEach((a) => {
-        a.addEventListener("click", () => {
-          mobile.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
-        });
-      });
+        if (open) mobile.removeAttribute("inert");
+        else mobile.setAttribute("inert", "");
+      };
+      setOpen(false);
+      toggle.addEventListener("click", () => setOpen(!mobile.classList.contains("is-open")));
+      mobile.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape" && mobile.classList.contains("is-open")) {
-          mobile.classList.remove("is-open");
-          toggle.setAttribute("aria-expanded", "false");
+          setOpen(false);
           toggle.focus();
         }
       });
@@ -187,7 +189,7 @@
      * Cursor spotlight — cards track the pointer via --mx / --my
      * ------------------------------------------------------------------- */
     if (!REDUCE && FINE_HOVER) {
-      document.querySelectorAll(".class-card, .specialism, .list-card").forEach((card) => {
+      document.querySelectorAll(".specialism, .list-card").forEach((card) => {
         card.addEventListener(
           "pointermove",
           (e) => {
@@ -291,6 +293,9 @@
         const y = target.getBoundingClientRect().top + window.pageYOffset - headerH - 16;
         window.scrollTo({ top: y, behavior: REDUCE ? "auto" : "smooth" });
         history.pushState(null, "", href);
+        // Move keyboard focus to the target so it isn't left on the link.
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
       });
     });
   });

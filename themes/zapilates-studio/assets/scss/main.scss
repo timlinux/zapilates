@@ -332,11 +332,16 @@ p {
   color: var(--ink);
   line-height: 1;
 
+  // The wordmark is a single inline unit so the flex gap never splits its
+  // letters (matches the footer's "Za<em>p</em>ilates" spacing).
+  .brand-word {
+    white-space: nowrap;
+  }
+
   .brand-mark {
     font-style: italic;
     font-weight: 300;
     color: var(--rust);
-    font-size: 1.65rem;
   }
 
   .brand-sub {
@@ -345,7 +350,7 @@ p {
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: var(--ink-muted);
-    margin-left: 0.5em;
+    align-self: center;
     display: none;
 
     @media (min-width: 1024px) { display: inline; }
@@ -2037,7 +2042,6 @@ p {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 800ms var(--ease), transform 800ms var(--ease), clip-path 800ms var(--ease);
-  will-change: opacity, transform;
 }
 .js .reveal.is-visible {
   opacity: 1;
@@ -2176,4 +2180,33 @@ p {
     animation: none !important;
     &::after { display: none; }
   }
+}
+
+/* -----------------------------------------------------------------------------
+ * 22. ACCESSIBILITY — visible focus, header focus reveal, mobile-menu guard
+ * -------------------------------------------------------------------------- */
+
+/* Branded, consistent keyboard focus across every interactive element */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-parent:focus-visible,
+.class-card:focus-visible,
+.specialism:focus-visible,
+.list-card:focus-visible,
+[data-magnetic]:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.enquiry-form :focus-visible { outline-offset: 2px; }
+
+/* Keyboard focus must always reveal the auto-hiding header */
+.site-header:focus-within { transform: none !important; }
+
+/* Mobile peel menu is desktop-hidden and never focusable when closed
+   (JS also sets `inert` on the closed container). */
+@media (min-width: 960px) {
+  .nav-mobile { display: none; }
 }

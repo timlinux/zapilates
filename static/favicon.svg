@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Zapilates">
+  <rect width="64" height="64" rx="13" fill="#1a1a1c"/>
+  <text x="31" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="600" text-anchor="middle" fill="#f4efe6">Z</text>
+  <circle cx="47" cy="19" r="4.5" fill="#b1583a"/>
+</svg>

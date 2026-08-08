@@ -18,10 +18,11 @@
     {{ if $pages }}
     <div class="list-grid">
       {{ range $pages }}
+      {{ $item := . }}
       <a class="list-card reveal" href="{{ .Permalink }}">
         {{ with .Params.image }}
         <div class="list-image">
-          <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+          <img src="{{ . | relURL }}" alt="{{ $item.Title }}" loading="lazy">
         </div>
         {{ end }}
 
