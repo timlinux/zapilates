@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-description: "Get in touch with Marcelle Volckaert to discuss Pilates classes, remedial work, workshops, or research."
+description: "Get in touch with Marcelle Sutton to discuss Pilates classes, remedial work, workshops, or research."
 image: "/images/FH_Canto+Lyrico-103.jpg"
 ---
 

@@ -17,9 +17,9 @@ theme = "zapilates-studio"
 
 ```toml
 [params]
-  tagline = "Pilates with Marcelle Volckaert"
+  tagline = "Pilates with Marcelle Sutton"
   description = "..."
-  author = "Marcelle Volckaert"
+  author = "Marcelle Sutton"
   location = "Lisbon & Marvão, Portugal"
   email = "marcelle@zapilates.com"
 

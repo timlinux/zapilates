@@ -1,6 +1,6 @@
 # Zapilates
 
-The official website of **Marcelle Volckaert** — Pilates instructor, remedial-work specialist, and researcher of Pilates for singers and musicians.
+The official website of **Marcelle Sutton** — Pilates instructor, remedial-work specialist, and researcher of Pilates for singers and musicians.
 
 [![Hugo](https://img.shields.io/badge/Hugo-0.147+-ff4088?logo=hugo)](https://gohugo.io/)
 [![Nix Flake](https://img.shields.io/badge/nix-flake-5277C3?logo=nixos)](https://nixos.wiki/wiki/Flakes)

@@ -1,5 +1,5 @@
 {
-  description = "zapilates.com — Marcelle Volckaert's Pilates studio website (Hugo static site + NixOS module)";
+  description = "zapilates.com — Marcelle Sutton's Pilates studio website (Hugo static site + NixOS module)";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";

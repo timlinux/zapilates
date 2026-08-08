@@ -2,7 +2,7 @@
 
 ## Overview
 
-Zapilates is a Hugo-powered static website for **Marcelle Volckaert**, a Pilates instructor and researcher based in Lisbon and Marvão, Portugal.
+Zapilates is a Hugo-powered static website for **Marcelle Sutton**, a Pilates instructor and researcher based in Lisbon and Marvão, Portugal.
 
 The site presents:
 

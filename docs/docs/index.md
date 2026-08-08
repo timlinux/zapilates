@@ -1,7 +1,7 @@
 # Zapilates Documentation
 
 Welcome to the documentation for Zapilates, the official website of
-Marcelle Volckaert — Pilates instructor and researcher based in Lisbon
+Marcelle Sutton — Pilates instructor and researcher based in Lisbon
 and Marvão, Portugal.
 
 ## Quick Links

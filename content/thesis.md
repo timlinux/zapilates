@@ -1,6 +1,6 @@
 ---
 title: "Research"
-description: "MMus (cum laude) — Marcelle Volckaert's research on a Pilates warm-up for classical singers at Stellenbosch University."
+description: "MMus (cum laude) — Marcelle Sutton's research on a Pilates warm-up for classical singers at Stellenbosch University."
 image: "/images/pilates-for-singers.jpg"
 weight: 15
 date: 2019-09-06
